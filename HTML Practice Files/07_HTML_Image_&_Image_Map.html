@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image & Image Map</title>
+</head>
+
+<body>
+    <!-- for adding a image into your page you have to use img tag -->
+    <!-- We can use height and width attribute on img tag-->
+    <img class="fit-picture" src="https://cdn.pixabay.com/photo/2022/12/03/20/22/killer-whale-7633370_960_720.jpg"
+        alt="Grapefruit slice atop a pile of other slices" height="400" width="600">
+
+    <!-- if you want to give multiple link on image you have to use map tag -->
+    <img src="workplace.jpg" alt="Workplace" usemap="#workmap">
+    <map name="workmap">
+        <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+        <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+        <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
+    </map>
+
+
+    <!-- The most common use of the <picture> element will be for art direction in responsive designs. Instead of having one image that is scaled up or down based on the viewport width, multiple images can be designed to more nicely fill the browser viewport. -->
+    <p>Resize the browser window to load different images.</p>
+    <picture>
+        <source media="(min-width:650px)" srcset="img_pink_flowers.jpg">
+        <source media="(min-width:465px)" srcset="img_white_flower.jpg">
+        <img src="img_orange_flowers.jpg" alt="Flowers" style="width:auto;">
+    </picture>
+
+</body>
+
+</html>
