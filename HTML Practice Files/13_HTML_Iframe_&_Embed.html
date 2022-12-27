@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframe and Embed</title>
+</head>
+
+<body>
+    <!-- With the help of Iframe we can add an external website,youtube video, audio, pdf, maps etc on our website. -->
+    <!-- Some attributes of iframe tag are width, height, src, name, titel, allowfullscreen, allow, allowpaymentrequest, loading, referrerpolicy, sandbox, srcdoc etc. -->
+
+    <!--For website-->
+    <iframe src="https://web.learncodeonline.in/" height="400" width="600" title="LearnCodeOnline"></iframe>
+
+    <!-- add youtube video -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Q4UWFGRVOpQ?start=30"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+
+    <!-- add google map -->
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3515.36114825585!2d73.01497040405545!3d19.05055188874648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1670504763372!5m2!1sen!2sin"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <!-- The <embed> tag defines a container for an external resource, such as a web page, a picture, a media player, or a plug-in application. -->
+    <embed type="text/html" src="snippet.html" width="500" height="200">
+
+    <!-- The <object> tag defines a container for an external resource. The external resource can be a web page, a picture, a media player, or a plug-in application. -->
+    <object data="snippet.html" width="500" height="200"></object>
+</body>
+
+</html>
