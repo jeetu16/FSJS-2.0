@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio and Video</title>
+</head>
+
+<body>
+    <!-- The <audio> tag is used to embed sound content in a document, such as music or other audio streams. -->
+    <!-- The <audio> tag contains one or more <source> tags with different audio sources. The browser will choose the first source it supports. -->
+    <!-- attributes of audio tag is controls, autoplay, loop, muted, preload, src -->
+    <audio controls>
+        <source src="horse.ogg" type="audio/mpeg">
+        <source src="horse.mp3" type="audio/mpeg">
+        Your browser does not support audio element
+    </audio>
+
+
+    <!-- The <video> tag is used to embed video content in a document, such as a movie clip or other video streams -->
+    <!-- The <video> tag contains one or more <source> tags with different video sources. The browser will choose the first source it supports. -->
+    <!-- The text between the <video> and </video> tags will only be displayed in browsers that do not support the <video> element. -->
+    <!-- attributes of video elements autoplay, controls, height, width, loop, muted, poster, preload, src etc. -->
+    <video width="320" height="240" poster="/workplace.jpg" controls>
+        <source src="movie.mp4" type="video/mp4">
+        <source src="movie.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+    </video>
+</body>
+
+</html>
