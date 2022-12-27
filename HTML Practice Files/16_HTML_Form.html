@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" method="">
+        <fieldset>
+            <legend>Basic Information</legend>
+
+            <label for="fname">First Name:</label>
+            <input type="text" name="fname" id="fname" maxlength="10" required autofocus> &nbsp;&nbsp;
+
+            <label for="lname">Last Name:</label>
+            <input type="text" name="lname" id="lname">
+        </fieldset>
+
+        <fieldset>
+            <legend>Contact</legend>
+
+            <label for="mobileno">Mobile No.:</label>
+            <input type="number" name="mobileno" id="mobileno"> &nbsp;&nbsp;
+
+            <label for="emailadd">Email:</label>
+            <input type="email" name="emailadd" id="emailadd">
+            <input type="hidden" name="">
+        </fieldset>
+        <fieldset>
+            <legend>Range,Date,Time</legend>
+            <label for="agerange">Age:</label>
+            <input type="range" name="agerange" id="agerange" min="18" max="35">
+
+            <label for="favcolor">Select your favorite color:</label>
+            <input type="color" id="favcolor" name="favcolor" value="#ff0000">
+
+            <label for="birthday">Birthday:</label>
+            <input type="date" id="birthday" name="birthday">
+
+            <label for="appt">Select a time:</label>
+            <input type="time" id="appt" name="appt">
+        </fieldset>
+        <fieldset>
+            <legend>File Upload</legend>
+
+            <label for="resume">Resume</label>
+            <input type="file" name="resume" id="resume" multiple>
+        </fieldset>
+
+        <!-- some input box attribute value(m), readonly(s), disabled(s), size(m), maxlength(m), min(m), max(m), placeholder(m), required(s), step(m), autofocus(s), autocomplete(s), name(m) etc.-->
+    </form>
+</body>
+
+</html>
