@@ -1,0 +1,40 @@
+/* There are many ways we can specify the colors in css */
+/* 
+
+1. Predefined Colors names 
+2. Hex color code
+3. RGB(red,green,blue)
+4. RGBA(red,green,blue,alpha)  //alpha is used for transparency
+5. HSL(hue, saturation, lightness)
+6. HSLA(hue, saturation, lightness, alpha) // alpha is used for transparency
+
+*/
+
+/* Here we use simple color name for background color */
+.heading1 {
+    background-color: red;
+}
+
+/* Here we use hex code for background color */
+.heading2 {
+    background-color: #784734;
+}
+
+/* Here we use rgb() value for background color */
+.heading3 {
+    background-color: rgb(233, 110, 120);
+}
+
+/* Here we use rgba() value for background color last value of rbga is alpha which is for transparent color its value always be from 0 to 1. */
+.heading4 {
+    background-color: rgba(0, 255, 123, 0.802);
+}
+
+/*  here we use hsl() value for background color */
+.heading5 {
+    background-color: hsl(291, 100%, 50%);
+}
+/* here we use hsla() value for background color */
+.heading6 {
+    background-color: hsla(100, 100%, 50%, 0.743);
+}
