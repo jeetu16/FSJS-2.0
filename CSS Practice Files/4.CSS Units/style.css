@@ -1,0 +1,70 @@
+/* 
+    There are two types of units in css:
+    1. Absolute
+    2. Relative
+
+    1. Absolute : The absolute length units are fixed and a length expressed in any of these will appear as exactly that size.
+    Example px, cm, mm, inch, pt etc.
+
+    2 Relative : Relative length units specify a length relative to another length property. Relative length units scale better between different rendering medium. Example em, rem, vh, vw, % etc.
+
+*/
+
+/* unit in px */
+h1 {
+    font-size: 80px;
+}
+
+
+/* em: Relative to the font-size of the element (2em means 2 times the size of the current font) */
+/* unit in em */
+.div1 {
+    font-size: 30px;
+    border: 1px solid black;
+}
+.div1-span {
+    font-size: 0.5em;
+}
+
+/* rem: Relative to font-size of the root element. Here root element is html.  Here div2.para font size 48 which because of root font size is 16 (16*3 = 48) */
+
+html {
+    font-size: 16px;
+}
+.div2 {
+    font-size: 18px;
+    border: 1px solid black;
+    margin-top: 20px;
+}
+.div2-para{
+    font-size: 3rem;
+}
+
+/* vw: Relative to 1% of the width of the viewport */
+.div3 h1 {
+    font-size: 20vw;
+}
+.div3 {
+    border: 1px solid red;
+    margin-top: 10px;
+}
+
+/* vh: Relative to 1% of the height of the viewport */
+.div4 h1{
+    font-size: 20vh;
+}
+.div4 {
+    border: 1px solid green;
+    margin-top: 10px;
+}
+
+/* %: Relative to the parent element */
+.div5 div {
+    font-size: 200%;
+    border: 1px solid black;
+}
+.div5 {
+    font-size: 20px;
+    border: 1px solid pink;
+    margin-top: 20px;
+}
