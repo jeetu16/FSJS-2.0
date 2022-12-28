@@ -1,9 +1,21 @@
-h1 {
-    background-color: yellow;
-}
+
+
+/* This is id selector it is more specific and powerful selector */
 #p1 {
     background-color: aqua;
 }
+
+/* This is class selector it is less specific then id selector but more specific than element selector */
 .p2 {
     background-color: thistle;
+}
+
+/* This is element selector it is less specific amongs all the selector. */
+h1 {
+    background-color: yellow;
+}
+
+/* If we apply same property in any element with the different values then the last applied value will applied on the element. But it always follows the hierarchy of CSS Selector. */
+h1 {
+    background-color: antiquewhite;
 }
