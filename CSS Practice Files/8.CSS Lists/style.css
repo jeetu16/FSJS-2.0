@@ -1,0 +1,33 @@
+
+
+body {
+    padding: 5% 10%;
+    font-size: 2rem;
+}
+
+ol {
+    list-style-type: upper-alpha; /* decimal(default), lower-alpha, upper-roman, none, georgian */ 
+    list-style-image: url("checkmark.png");
+}
+
+ul {
+    list-style-type: square;
+    list-style-position: inside;
+    
+}
+
+ul li {
+    color: brown;
+}
+
+ol li:nth-child(odd){   /* pseudo-class */
+    color: violet;
+}
+ul li:last-child {
+    color: orange;
+}
+ul ::marker {          /* pseudo-element */
+    color: red;
+    /* font-size: 2rem; */
+    content: "$5,";
+}
