@@ -1,0 +1,26 @@
+/* 
+    When a link is not visited then the color of link is blue.
+    If link is visited then it's color must be purple and when you click and hold down on a link then it's color is red 
+
+*/
+
+a {
+    text-decoration: none;
+
+}
+
+a:visited {
+    color: darkblue;
+}
+
+a:hover {
+    color: burlywood;
+}
+
+a:focus{
+    color:crimson;
+}
+
+a:active {
+    color: yellow;
+}

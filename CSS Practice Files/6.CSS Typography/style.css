@@ -25,6 +25,7 @@ span {
     text-decoration: underline; /* overline, line-through */
     color:sienna;
     font-style: italic; /* normal, oblique */
+    cursor: pointer;
 }
 
 input, button {
