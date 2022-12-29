@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@&display=swap');
+
+:root {
+    --robo-font: 'Roboto', sans-serif; /* font stack */
+}
+
+body {
+    padding: 5%;
+    font-family: var(--robo-font);
+    font-size: 1.5em;
+}
+
+p {
+    letter-spacing: .1em;
+    word-spacing: .2em;
+    line-height: 1.5;
+    text-align: justify; /* center, left(bydefault), right */
+    text-indent: 2em;
+    font-weight: lighter; /* 100...900, bold, bolder */
+    text-transform: capitalize; /* uppercase, lowercase */
+
+}
+
+span {
+    text-decoration: underline; /* overline, line-through */
+    color:sienna;
+    font-style: italic; /* normal, oblique */
+}
+
+input, button {
+    font-family: inherit;
+    font-size: inherit;
+}
