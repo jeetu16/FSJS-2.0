@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img { display: block; }  /* for reset img padding  */
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.offscreen {
+    position: absolute;
+    left: -1000px;
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+
+    background-image: url("./img/bubbles.png"), linear-gradient(to left, steelblue, #fff);
+      background-repeat: repeat-y, no-repeat;
+      background-position: right center;
+}
+
+.hero {
+    border: 2px solid #000;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+
+    background-color: hsla(0, 0%, 100%, 0.2);
+}
+
+h1{
+    font-size: 500%;
+    color: aliceblue;
+    text-shadow: 3px 3px 5px #000;
+    /* background-color: hsla(0, 0%, 0%, 0.5); */
+    padding: 0.25rem;
+    
+}
+
+.profile-pic-figure {
+    width: 35%;
+ }
+
+.profile-pic-figure img{
+    width: 100%;
+    height: auto;
+    min-width: 100px;
+    border: 5px double gray;
+    border-radius: 50%;
+}
+
+.example {
+    margin-top: 1rem;
+    padding-left: 1rem;
+    border: 1px solid red;
+}
+
+.example img {
+    width: 25%;
+    height: auto;
+}
