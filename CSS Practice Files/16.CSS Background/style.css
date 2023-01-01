@@ -20,11 +20,19 @@ img { display: block; }  /* for reset img padding  */
 body {
     font-family: "Nunito", sans-serif;
 
-    background-image: url("./img/bubbles.png"), linear-gradient(to left, steelblue, #fff);
-      background-repeat: repeat-y, no-repeat;
-      background-position: right center;
+    /* background-image: url("./img/bubbles.png"), linear-gradient(to left, steelblue, #fff);
+    background-repeat: repeat-y, no-repeat;
+    background-position: right center;
+    background-size: 20%, auto; */
+    /* background: repeat-y right center url("../img/bubbles.png"), no-repeat linear-gradient(to left, steelblue, #fff); */
 }
-
+.container {
+    background-color: rgb(251, 210, 156);
+    background-image: url('./img/map-2176x1451.png');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
 .hero {
     border: 2px solid #000;
     display: flex;
@@ -65,4 +73,16 @@ h1{
 .example img {
     width: 25%;
     height: auto;
+}
+
+.clip {
+    font-weight: 800;
+    font-size: 18rem;
+    text-align: center;
+    background-image: url("./img/scenic-2200x1331.png");
+    background-size: 100%;
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
