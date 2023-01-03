@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Varialbes */
+
+:root {
+    /* Font */
+    --FF : "Nunito",
+        sans-serif;
+    --FS : 1.5rem;
+    --FS-XL : 3rem;
+
+    /* COLOR */
+    --BG-COLOR : #827c7c;
+    --RADIAL-COLOR : whitesmoke;
+    --LIGHT-COLOR : whitesmoke;
+    --DARK-COLOR : #000;
+    --H-F-BGCOLOR : #bd9999;
+
+    /* General */
+    --PADDING : 0.5rem;
+    --SHADOW : 0px 6px 5px -5px var(--DARK-COLOR);
+    --BORDER : 2px solid var(--DARK-COLOR);
+
+    /* SQUARE */
+    --SQUARE-SIZE : max(150px, 20vw);
+    --SQUARE-BGCOLOR : papayawhip;
+
+}
+
+@media (prefers-color-scheme:light) {
+    :root {
+        --BG-COLOR: #000;
+        --RADIAL-COLOR: #d9d9d9;
+        --H-F-BGCOLOR: #333;
+        --SQUARE-BGCOLOR : #796879;
+    }
+} 
+
+/* Genral Styles */
+body {
+    font: var(--FS) var(--FF) ;
+    min-height: 100vh;
+
+    background-color: var(--BG-COLOR);
+    background-image: radial-gradient(var(--LIGHT-COLOR),var(--BG-COLOR));
+    display: flex;
+    flex-direction: column;
+}
+
+header, nav, footer {
+    display: grid;
+    place-content: center;
+    grid-template-columns: 100%;
+    text-align: center;
+}
+
+header, footer {
+    position: sticky;
+    background-color:var(--H-F-BGCOLOR);
+    color: whitesmoke;
+}
+
+header {
+    top: 0;
+}
+nav {
+    background-color: var(--LIGHT-COLOR);
+    color: var(--DARK-COLOR);
+    padding: var(--PADDING);
+    border-bottom: var(--BORDER);
+    box-shadow: var(--SHADOW);
+}
+main{
+    flex-grow: 1;
+    padding: 10px 0; 
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: row wrap; 
+    gap: min(4vw, 15px);
+}
+.square-highlighted {
+    --SQUARE-BGCOLOR: #7d4e4e;
+}
+.square {
+    background-color: var(--SQUARE-BGCOLOR);
+    width: var(--SQUARE-SIZE);
+    height: var(--SQUARE-SIZE);
+    font-size: var(--FS-XL);
+    display: grid;
+    place-content: center;
+    border: var(--BORDER);
+    border-radius: 15px;
+    box-shadow: var(--SHADOW);
+
+}
+
+footer {
+    bottom: 0;
+}
