@@ -39,6 +39,7 @@ footer){           /* :is is more specific */
     background-color: #50afad;
     color: #333;
     text-align: center;
+    z-index: 1;
 }
 
 
