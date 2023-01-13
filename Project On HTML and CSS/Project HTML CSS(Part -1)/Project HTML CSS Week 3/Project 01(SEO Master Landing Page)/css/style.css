@@ -163,7 +163,7 @@ button:hover {
 @media screen and (max-width: 540px) {
     .banner-container {
         margin-top: 60px;
-        background-image: url("./assets/Header Illustration.png");
+        background-image: url(../assets/Header\ Illustration.png);
         background-repeat: no-repeat;
         background-size: 60%;
         background-position: top right;
