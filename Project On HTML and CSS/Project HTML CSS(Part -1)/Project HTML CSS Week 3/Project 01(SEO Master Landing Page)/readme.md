@@ -2,6 +2,8 @@
 
 This is my first project of `Full Stack JavaScript Bootcamp 2.0` course. Here i used some css property for creating this SEO Master Landing Page. I have made this project for mainly for desktop device.
 
+- [Live Link](https://seo-landing-page-created-by-jeetu.netlify.app/)
+
 ## Technology Used 
 
 ![](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
