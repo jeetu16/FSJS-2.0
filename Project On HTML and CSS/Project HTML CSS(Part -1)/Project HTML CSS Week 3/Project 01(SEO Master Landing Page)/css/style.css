@@ -121,12 +121,15 @@ button:hover {
     nav img {
         margin-left: 0px;
     }
+
     .button-group {
         margin-right: 0px;
     }
+
     .grow-list {
         margin-left: 0px;
     }
+
     .button-group {
         margin-right: 0px;
     }
@@ -136,6 +139,7 @@ button:hover {
     .list-item {
         margin-right: 15px;
     }
+
     .heading-text {
         font-size: 40px;
         word-spacing: 2px;
@@ -143,12 +147,14 @@ button:hover {
         letter-spacing: 0px;
         line-height: 1.2;
     }
+
     .description {
         margin: 30px 0 10px 30px;
         width: 60%;
         line-height: 1.2;
         text-align: justify;
     }
+
     .banner-container button {
         margin: 10px 0px 0px 30px;
     }
@@ -157,22 +163,26 @@ button:hover {
 @media screen and (max-width: 540px) {
     .banner-container {
         margin-top: 60px;
-        background-image: url("./assets/Header\ Illustration.png");
+        background-image: url("./assets/Header Illustration.png");
         background-repeat: no-repeat;
         background-size: 60%;
         background-position: top right;
     }
+
     .banner-container div:last-child {
         display: none;
     }
+
     .list {
         display: none;
     }
+
     .heading-text {
         width: 90%;
         font-size: 30px;
-    
+
     }
+
     .description {
         width: 80%;
         margin: 30px 30px;
