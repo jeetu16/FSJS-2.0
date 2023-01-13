@@ -1,8 +1,14 @@
 # Full Stack JavaScript Web Development
 
-In this repo, I have share all my learning, which I have learned from `Full Stack JavaScript Web Development Course from ineuron.` 
+In this repo, I have share all my learnings, practices, projects and articles which I have learned from `Full Stack JavaScript Web Development Course at ineuron.` 
+## Article
+- [Source Code](./Articles/)
 
-## HTML Practice
-I have practiced lots of **HTML** tags like `<h1>..<h6>, <p>, <a>, <img>, <ul>, <ol>, <table>, <form>, <iframe>, Semantic Tags etc.` Now I am very comfortable from all these tags. I have share all my practice files below. 
+## Practice
+- [Source Code](./Practice/)
 
-[HTML Practice](./HTML%20Practice%20Files/)
+## Project On HTML and CSS
+- [Source Code](./Project%20On%20HTML%20and%20CSS/)
+
+## JavaScript Assignment
+- [Source Code](./JavaScript%20Assignment/)
