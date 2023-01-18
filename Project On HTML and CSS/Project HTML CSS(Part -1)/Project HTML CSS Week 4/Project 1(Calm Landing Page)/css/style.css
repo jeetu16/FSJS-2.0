@@ -1,0 +1,174 @@
+*,
+::after,
+::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(238, 232, 232);
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.nav-bar {
+    display: flex;
+    align-items: center;
+    padding: .75em 0;
+    width: 80%;
+    margin: 0.5em auto;
+}
+
+.logo {
+    display: flex;
+    color: red;
+}
+
+.logo img {
+    align-self: center;
+    cursor: pointer;
+    width: 100%;
+    height: auto;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 3rem;
+    margin-left: 3rem;
+}
+
+.list-item {
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.list-item:hover {
+    opacity: 0.7;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+}
+
+.right-side {
+    width: 50%;
+    text-align: center;
+}
+
+.img-container {
+    margin-top: 60px;
+}
+
+.right-side img:nth-child(1) {
+    width: 25%;
+    margin-right: 2%;
+    margin-bottom: 1.5%;
+}
+
+.right-side img:nth-child(2) {
+    width: 25%;
+    margin-bottom: 1.5%;
+}
+
+.right-side img:nth-child(3) {
+    width: 53%;
+}
+
+.left-side {
+    width: 30%;
+    display: flex;
+    margin: auto 0;
+}
+
+.left-heading {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 1.2;
+}
+
+.left-para {
+    font-size: 13px;
+    margin: 2rem 0;
+}
+
+.left-btn {
+    width: 100px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: #3B855B;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+.left-btn:hover {
+    opacity: 0.8;
+}
+
+@media screen and (max-width:992px) {
+
+    .left-heading {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width:719px) {
+    .main-container {
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5rem;
+        gap: 5rem;
+    }
+
+    .left-side {
+        width: 80%;
+        z-index: 3;
+    }
+
+    .left-para {
+        margin: 1rem 0;
+    }
+
+    .right-side {
+        position: absolute;
+        right: 0;
+        opacity: 0.6;
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:421px) {
+    .left-heading {
+        font-size: 25px;
+    }
+
+    .list-item {
+        display: none;
+    }
+
+    .logo {
+        width: 30%;
+    }
+
+    .nav-bar::after {
+        content: url("../images/bars-solid.svg");
+        width: 18px;
+        height: 18px;
+        ;
+        display: inline-block;
+    }
+
+    .nav-bar {
+        justify-content: space-between;
+    }
+}
