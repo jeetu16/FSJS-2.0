@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Circle</title>
+    <style>
+        @keyframes changeCircle {
+            0% {transform: scale(1);}
+            50% {transform: scale(.5);}
+            100% {transform: scale(0);}
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #333;
+            width: 100vw;
+            height: 100vh;
+
+        }
+        .circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: red;
+            animation-name: changeCircle;
+            animation-duration: .7s;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-in;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let container = document.body;
+
+        container.addEventListener('click', function(temp) {
+            let element = document.createElement('div')
+            element.classList.add('circle')
+            element.style.backgroundColor = randomColor();
+            container.appendChild(element)
+
+            element.style.top = temp.pageY - 20 + 'px'
+            element.style.left = temp.pageX - 20 + 'px'
+
+            setTimeout(function(){
+                container.removeChild(element);
+            },650)
+            
+            
+        })
+
+        function randomColor(){
+            code = ['0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F']
+            colorCode = "#"
+
+            for(let i=0; i<6; i++){
+                randomNum = Math.floor(Math.random()*16)
+                colorCode += code[randomNum]
+            }
+            return colorCode
+        }
+
+        
+    </script>
+</body>
+</html>
