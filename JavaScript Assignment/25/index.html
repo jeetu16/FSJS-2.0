@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <style>
+        body {
+            padding: 5rem;
+            background-color: #4b4949;
+            text-align: center;
+            color: whitesmoke;
+            font-size: 1.5rem;
+        }
+        label {
+            display: block;
+        }
+        input{
+            margin: 0.5rem ;
+            font-size: inherit;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            padding: 0.25rem 2rem;
+        }   
+        input::-webkit-inner-spin-button,
+        input::-webkit-outer-spin-button {
+            display: none;
+        }
+        button {
+            margin: 2rem 0;
+            padding: 0.5rem 2rem;
+            background-color: #81dbe7;
+            border: none;
+            border-radius: 30px;
+            font-size: inherit;
+        }    
+    </style>
+</head>
+<body>
+    <label for="weight">Enter Your Weight(In Kilograms(kg)):</label><br>
+    <input type="number" name="weight" id="weight"><br>
+    <label for="height">Enter Your Height(In Meters(m))</label><br>
+    <input type="number" name="height" id="height"><br>
+    <button id="btn">Check Your BMI</button>
+    <p id="show"></p>
+
+    <script src="./script.js"></script>
+</body>
+</html>
