@@ -1,0 +1,655 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* ++++++++++ reset ++++++++++++ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+
+/* +++++++++++++ Variables ++++++++++++++ */
+:root {
+    /* COLOR */
+    --TXT-COLOR-LIGHT: #FEFEFE;
+    --TXT-COLOR-GRAY: #bebdbd;
+    --TXT-COLOR-GRAY-DARK: #6b6b6b;
+    --TXT-COLOR-DARK: #101010;
+    --TXT-COLOR-ORG: #F4694C;
+    --TXT-COLOR-ORG-HOVER: #c45742;
+    --BTN-COLOR-ORG: #F4694C;
+    --BTN-SLIDE-LIGHT: #FDE1DB;
+    --BTN-COLOR-DARK2: #000308;
+    --BLANK-F-COLOR: #000611;
+
+    /* Font */
+    --FF: "Roboto", sans-serif;
+    --FS: 1rem;
+    --FS-M: 2rem;
+    --FS-L: 2.5rem;
+    --FS-XL: 3rem;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font: var(--FS) var(--FF);
+}
+
+/*
+++++++++++++++++++ 
+Header
+++++++++++++++++++
+*/
+
+header {
+    background-image: url(./Photos/futuristic-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: lighten;
+}
+
+.background {
+    background-color: rgba(0, 0, 0, 0.445);
+}
+
+/* ++++++++++ Navbar +++++++++++ */
+nav {
+    display: flex;
+    align-items: center;
+    color: var(--TXT-COLOR-GRAY);
+}
+
+.nav-logo {
+    margin-left: 100px;
+    padding: 20px 0px;
+}
+
+.nav-middle {
+    margin-left: 150px;
+}
+
+.nav-middle-list {
+    display: flex;
+    list-style: none;
+    padding: 10px 15px;
+    /* border: 1px solid blue; */
+}
+
+.nav-middle-list li {
+    margin-left: 30px;
+}
+
+.nav-middle-list a {
+    text-decoration: none;
+    color: inherit;
+    transition: all .7s linear;
+}
+
+.nav-middle-list a:hover {
+    color: var(--TXT-COLOR-LIGHT)
+}
+
+.nav-last {
+    margin-left: 300px;
+}
+
+.nav-last button {
+    padding: 0.8rem 1.5rem;
+    color: inherit;
+    border: none;
+    border-radius: 1px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all .8s ease-in-out;
+}
+
+.nav-last button:first-child {
+    background: inherit;
+}
+
+.nav-last button:first-child:hover {
+    background-color: var(--BTN-COLOR-ORG);
+}
+
+.nav-last button:last-child {
+    background-color: var(--BTN-COLOR-ORG);
+}
+
+.nav-last button:last-child:hover {
+    background-color: var(--TXT-COLOR-ORG-HOVER);
+}
+
+/* +++++++++++++ Introduction +++++++++++++++ */
+.intro {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 6rem;
+}
+
+.intro-left {
+    width: 50%;
+}
+
+.intro-left h1 {
+    color: var(--TXT-COLOR-LIGHT);
+    width: 68%;
+    font-size: 3rem;
+    font-weight: bolder;
+    line-height: 4rem;
+    text-shadow: 3px 1px 2px var(--BTN-COLOR-ORG);
+}
+
+.intro p {
+    color: var(--TXT-COLOR-GRAY-DARK);
+    width: 65%;
+    line-height: 1.7rem;
+    margin: 2rem 0;
+}
+
+.intro-btn {
+    margin-bottom: 5rem;
+}
+
+.intro-btn button {
+    background-color: inherit;
+    color: var(--TXT-COLOR-LIGHT);
+    padding: 1rem 3rem;
+    border-radius: 2px;
+    font-size: inherit;
+    font-weight: 600;
+    transition: all .6s ease-in-out;
+}
+
+.intro-btn button:first-child {
+    background-color: var(--BTN-COLOR-ORG);
+    border: 1px solid var(--BTN-COLOR-ORG);
+}
+
+.intro-btn button:first-child:hover {
+    background-color: var(--TXT-COLOR-ORG-HOVER);
+}
+
+.intro-btn button:last-child {
+    border: 1px solid var(--TXT-COLOR-LIGHT);
+    margin-left: .5rem;
+}
+
+.intro-btn button:last-child:hover {
+    background-color: var(--BTN-COLOR-ORG);
+    border: 1px solid var(--BTN-COLOR-ORG);
+}
+
+.intro-right {
+    width: 30%;
+    text-align: center;
+}
+
+img[alt="play button"] {
+    margin-top: 6rem;
+    position: relative;
+    right: 3rem;
+    transition: all 0.87s ease;
+}
+
+img[alt="play button"]:hover {
+    transform: scale(1.1);
+}
+
+.intro-para {
+    display: flex;
+    margin-top: 6rem;
+}
+
+.intro-right p {
+    font-size: 1.5rem;
+    color: var(--TXT-COLOR-LIGHT);
+    width: 55%;
+    line-height: 2rem;
+    text-align: left;
+    margin: 1rem;
+}
+
+.intro-para img:first-child {
+    position: relative;
+    top: 2rem;
+    height: fit-content;
+}
+
+.intro-para img:last-child {
+    position: relative;
+    top: 6rem;
+    height: fit-content;
+}
+
+/*
+++++++++++++++ 
+Main
+++++++++++++++
+*/
+
+/* ++++++++++++++ Popluar Games +++++++++++++++++++ */
+.popular-games h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 900;
+    width: 50%;
+    margin: 8rem auto 3rem;
+}
+
+.games {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 4rem auto 5rem;
+}
+
+.gm {
+    width: 20vw;
+    height: 25vw;
+    border-radius: 2px;
+    position: relative;
+}
+
+.gm1 {
+    background-image: url("./Photos/image 1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: -220px 100%;
+}
+
+.gm2 {
+    background-image: url("./Photos/image 2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.gm3 {
+    background-image: url("./Photos/image 3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.gm4 {
+    background-image: url("./Photos/image 4.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.game-des {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    width: 100%;
+    bottom: 0;
+    backdrop-filter: blur(50px);
+    background-blend-mode: lighten;
+    padding: 1rem 0.5rem;
+}
+
+.game-des-left h4 {
+    color: var(--TXT-COLOR-LIGHT);
+    font-weight: 400;
+}
+
+.game-des-left p {
+    color: var(--TXT-COLOR-GRAY);
+    margin: 0.5rem 0;
+}
+
+.game-des button {
+    width: fit-content;
+    height: fit-content;
+    background-color: var(--BTN-COLOR-ORG);
+    border: none;
+    border-radius: 2px;
+    color: var(--TXT-COLOR-LIGHT);
+    padding: 0.8rem 1.5rem;
+}
+
+.game-des button:hover {
+    background-color: var(--TXT-COLOR-ORG-HOVER);
+}
+
+/* +++++++++++++ War Game +++++++++++++++*/
+.war-game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    margin: 10rem 0;
+}
+
+.war-game-img {
+    width: 40%;
+    height: 65vh;
+    display: flex;
+}
+
+.war-game-img img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.war-game-txt {
+    padding: 1.5rem 0;
+    width: 40%;
+}
+
+.war-game-txt h2 {
+    font-size: var(--FS-L);
+    font-weight: bolder;
+    width: 75%;
+    line-height: 3.5rem;
+}
+
+.war-game-txt p {
+    color: var(--TXT-COLOR-GRAY-DARK);
+    line-height: 1.7rem;
+    margin: 2rem 0;
+}
+
+.war-game-btn button {
+    background-color: inherit;
+    padding: 1rem 2rem;
+    font-size: inherit;
+    transition: all 0.6s ease;
+    cursor: pointer;
+}
+
+.war-game-btn button:first-child {
+    background-color: var(--BTN-COLOR-ORG);
+    color: var(--TXT-COLOR-LIGHT);
+    border: 1px solid var(--BTN-COLOR-ORG);
+    transition: all 0.5s ease;
+}
+
+.war-game-btn button:first-child:hover {
+    background-color: var(--TXT-COLOR-LIGHT);
+    color: var(--BTN-COLOR-ORG);
+    border: 1px solid var(--BTN-COLOR-ORG);
+}
+
+.war-game-btn button:last-child {
+    border: 1px solid var(--BTN-COLOR-ORG);
+    color: var(--BTN-COLOR-ORG);
+    margin-left: 0.5rem;
+    transition: all 0.5s ease;
+}
+
+.war-game-btn button:last-child:hover {
+    background-color: var(--BTN-COLOR-ORG);
+    color: var(--TXT-COLOR-LIGHT);
+}
+
+/* ++++++++++ Game Recommend ++++++++++++++*/
+
+.recommend-txt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35rem;
+}
+
+.recommend-txt h2 {
+    font-size: var(--FS-L);
+    width: 35%;
+}
+
+.slide-btn button {
+    padding: 1rem 0.8rem;
+    border: none;
+    cursor: pointer;
+}
+
+#left-arrow {
+    background-color: var(--BTN-SLIDE-LIGHT);
+    transition: all 0.5s ease;
+}
+
+#left-arrow:hover .left-arrow-svg path,
+#left-arrow:hover {
+    background-color: var(--BTN-COLOR-ORG);
+    fill: var(--TXT-COLOR-LIGHT);
+    /* color: black; */
+}
+
+#right-arrow {
+    background-color: var(--BTN-COLOR-ORG);
+    margin-left: 0.5rem;
+    transition: all 0.5s ease;
+}
+
+#right-arrow:hover .right-arrow-svg path,
+#right-arrow:hover {
+    background-color: var(--BTN-SLIDE-LIGHT);
+    fill: var(--BTN-COLOR-ORG);
+}
+
+.game {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    justify-content: center;
+    column-gap: 3rem;
+    row-gap: 2rem;
+    margin: 5rem auto 7rem;
+}
+
+.gm-recom {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    align-items: center;
+    width: 95%;
+    column-gap: 1.5rem;
+}
+
+.gm-recom-img img {
+    width: 100%;
+    height: auto;
+}
+
+.gm-recom-txt h3 {
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+.gm-recom-txt h4 {
+    color: var(--BTN-COLOR-ORG);
+    font-weight: 500;
+    margin: 1rem 0;
+}
+
+.gm-recom-txt p {
+    font-size: 0.9rem;
+    color: var(--TXT-COLOR-GRAY-DARK);
+    margin: 1rem 0;
+}
+
+.gm-recom-txt button {
+    background-color: var(--BTN-COLOR-ORG);
+    border: 1px solid var(--BTN-COLOR-ORG);
+    color: var(--TXT-COLOR-LIGHT);
+    padding: 1rem 2.5rem;
+    margin-top: 2rem;
+    transition: all 0.5s ease;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.gm-recom-txt button:hover {
+    background-color: var(--TXT-COLOR-LIGHT);
+    color: var(--BTN-COLOR-ORG);
+    border-color: var(--BTN-COLOR-ORG);
+}
+
+/* ++++++++++ Most Played Games +++++++++++ */
+
+.most-played-game {
+    background: var(--BTN-COLOR-DARK2);
+    padding-top: 5rem;
+}
+
+.most-played-game h2 {
+    color: var(--TXT-COLOR-LIGHT);
+    text-transform: capitalize;
+    font-size: 2.5rem;
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.most-played-game-para {
+    color: var(--TXT-COLOR-GRAY-DARK);
+    width: 45%;
+    line-height: 1.5;
+    margin: 5rem 12rem 3rem auto;
+}
+
+.most-played-game-img {
+    display: grid;
+    background-image: url("./Icons/GAMES\ OF\ THE\ WORLD.svg");
+    background-repeat: no-repeat;
+    background-size: 65%;
+    background-position: top right;
+    grid-template-columns: 1.1fr 0.8fr .8fr;
+    gap: 3rem;
+    padding: 0 15rem 6rem 8rem;
+
+}
+
+.msi {
+    position: relative;
+}
+
+.msi img {
+    display: block;
+    width: 100%;
+    object-fit: contain;
+}
+
+.most-played-img1 {
+    top: -8rem;
+}
+
+.most-played-img2 {
+    top: 2rem;
+}
+
+.most-played-img3 {
+    top: 10.5rem;
+}
+
+/* ++++++++++++ experience +++++++++++ */
+
+ .experience{
+    background-image: url("./Photos/gamer.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+ }
+
+.experience-background{
+    background-color: rgba(0, 0, 0, 0.604);
+}
+ .experience-txt {
+    text-align: center;
+    padding: 5rem 0;
+    width: 50%;
+    margin: 0 auto;
+ }
+
+ .experience-txt h3 {
+    width: 80%;
+    font-size: 2.5rem;
+    color: var(--TXT-COLOR-LIGHT);
+    text-align: center;
+    margin: 0 auto;
+    line-height: 1.5;
+ }
+ .experience-txt p{
+    color: var(--TXT-COLOR-GRAY);
+    width: 55%;
+    text-align: center;
+    line-height: 1.5;
+    margin: 2rem auto;
+ }
+ .experience-txt button {
+    background-color: var(--BTN-COLOR-ORG);
+    color: var(--TXT-COLOR-LIGHT);
+    border: 1px solid var(--BTN-COLOR-ORG);
+    font-size: inherit;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    transition: all 0.5s ease;
+ }
+
+ .experience-txt button:hover {
+    background-color: var(--TXT-COLOR-LIGHT);
+    color: var(--BTN-COLOR-ORG);
+ }
+
+/*
+++++++++++++++++++++
+Footer
+++++++++++++++++++++
+*/
+footer {
+    background-color: #000309;
+    color: var(--TXT-COLOR-GRAY-DARK);
+}
+.footer-txt {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+    padding: 4rem 3rem 2rem;
+    margin: 0 5rem;
+}
+
+.social-link svg:hover path {
+    transition: all 0.5s ease;
+    background-color: #fff;
+    fill: var(--BTN-COLOR-ORG);
+}
+.instagram {
+    margin: 0 0.5rem;
+}
+
+.social-link li:nth-child(2) {
+    width: 65%;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.footer-txt ul li{
+    margin-bottom: 1rem;
+}
+.footer-txt ul li a {
+    color: var(--TXT-COLOR-DARK-LIGHT);
+}
+.footer-txt ul li a:hover {
+    color: var(--BTN-COLOR-ORG);
+}
+.footer-txt ul li:first-child a{
+    color: var(--TXT-COLOR-LIGHT);
+    font-weight: 500;
+}
+.blank-footer {
+    height: 10vh;
+    background-color: var(--BLANK-F-COLOR);
+    border-top: 2px solid var(--TXT-COLOR-GRAY);
+}

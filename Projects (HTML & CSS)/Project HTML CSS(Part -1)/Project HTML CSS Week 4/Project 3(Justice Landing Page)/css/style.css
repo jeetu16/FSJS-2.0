@@ -1,0 +1,148 @@
+*,
+::after,
+::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #2B2923;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+}
+
+.main-container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.navbar {
+    width: 75%;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-btn {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.navbar img {
+    cursor: pointer;
+    width: 15%;
+    align-self: center;
+}
+
+.list {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.list-item {
+    list-style: none;
+    cursor: pointer;
+    color: #eeeeee;
+}
+
+.list-item:hover {
+    opacity: 0.7;
+    transition: all 0.6s ease;
+}
+
+.started-btn {
+    border: 1px solid #908134;
+    padding: 0.75rem 1.5rem;
+    border-radius: 7px;
+    color: #908134;
+    background-color: #2B2923;
+    font-weight: 900;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.started-btn:hover {
+    background-color: #908134;
+    color: #2B2923;
+    transition: all 0.5s ease;
+}
+
+.text {
+    width: 75%;
+    margin: 5rem auto 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.heading {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+    width: 40%;
+    font-size: 50px;
+}
+
+.para {
+    width: 30%;
+    line-height: 1.5;
+}
+
+.img {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.img img {
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width:991px) {
+    .heading {
+        font-size: 35px;
+    }
+    .para {
+        width: 40%;
+    }
+    .started-btn {
+        padding: 0.5rem 1.25rem;
+    }
+}
+
+@media screen and (max-width:768px){
+    .list {
+        display: none;
+    }
+    .heading {
+        font-size: 30px;
+    }
+    .para {
+        width: 45%;
+    }
+}
+@media screen and (max-width:421px){
+    .text {
+        margin: 3rem auto 2rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+    .heading {
+        width: 100%;
+    }
+    .para {
+        width: 100%;
+    }
+    .started-btn {
+        padding: 0.25rem 1rem;
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .navbar img {
+        width: 30%;
+    }
+}
