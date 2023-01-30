@@ -4,11 +4,16 @@ In this repo, I have share all my learnings, practices, projects and articles wh
 ## Article
 - [Source Code](./Articles/)
 
+## JavaScript Assignment
+- [Source Code](./JavaScript%20Assignment/)
+
 ## Practice
 - [Source Code](./Practice/)
 
-## Project On HTML and CSS
-- [Source Code](./Project%20On%20HTML%20and%20CSS/)
+## Projects (HTML & CSS)
+- [Source Code](./Projects%20(HTML%20%26%20CSS)/)
 
-## JavaScript Assignment
-- [Source Code](./JavaScript%20Assignment/)
+## Projects (Tailwind CSS)
+-[Source Code](./Projects%20(Tailwind)/)
+
+
