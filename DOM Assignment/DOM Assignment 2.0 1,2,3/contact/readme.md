@@ -1,4 +1,4 @@
-# Third Assignment Solution
+# DOM Assignment 3 Solution
 
 ## Task
 
@@ -7,7 +7,7 @@ Add text in the input fields.
 ![Task](../thirdAssignmentImage/task1Output.png)
 
 
-- ## Task Solution 
+- ## Solution 
 
 ```js
 // User Input Board
