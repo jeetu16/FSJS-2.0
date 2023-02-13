@@ -1,10 +1,10 @@
-# Fourth Assignment Solution
+# DOM Assignment 4 Solution
 
 ## Task
 
 ![Task](./04_DOM%20Project/Output/DOM%20P1%20SS.png)
 
-- ## Task Solution
+- ## Solution
 
 ```js
 //Fourth Assignment Solution
