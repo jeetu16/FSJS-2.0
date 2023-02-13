@@ -1,4 +1,4 @@
-# Second Assignment Solution
+# DOM Assignment 2 Solution
 
 ## Task 1
 
@@ -6,7 +6,7 @@ Add background color of all heading in about page.
 
 ![Task 1](../secondAssignmentImage/task1Output.png)
 
-- ## Task 1 Solution
+- ## Solution
 
 ```js
 let headings = document.querySelectorAll("h3");
@@ -21,7 +21,7 @@ Add an element 'Skills' after 'Hobbies'
 
 ![Task 2](../secondAssignmentImage/task2Output.png)
 
-- ## Task 2 Solution
+- ## Solution
 
 ```js
 let wrapper_main = document.querySelector(".accordian-wrapper");
