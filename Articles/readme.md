@@ -18,5 +18,7 @@
 
 ## Article 6 Let's Learn Something About Flexbox
 
+- [Link](https://jeetu.hashnode.dev/lets-learn-something-about-flexbox)
+
 ## Article 7 Hoisting in JavaScript
 - [Link](https://jeetu.hashnode.dev/hoisting-in-javascript)
