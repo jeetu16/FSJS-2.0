@@ -15,3 +15,6 @@
 
 ## Article 5 Array and Array Methods in JavaScript
 - [Link](https://jeetu.hashnode.dev/array-and-array-methods-in-javascript)
+
+## Article 6 Hoisting in JavaScript
+- [Link](https://jeetu.hashnode.dev/hoisting-in-javascript)
