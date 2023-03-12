@@ -1,0 +1,21 @@
+.our-achiever {
+    background-color: #EAECEF;
+    padding: 4rem 3rem;
+}
+
+
+.our-achiever h1 {
+    text-align: center;
+    color: #5A4BDA;
+    font-size: 3rem;
+}
+
+.achiever-img {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 5rem;
+}
+
+.achiever-img img {
+    width: 20%;
+}

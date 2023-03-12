@@ -1,0 +1,19 @@
+.feature-card {
+    text-align: center;
+    font-weight: bold;
+}
+
+.feature-card img {
+    width: 200px;
+}
+
+.numbers {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.card-text {
+    font-size: 1.5rem;
+    color : #939393
+}
+

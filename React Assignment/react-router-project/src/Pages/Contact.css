@@ -1,0 +1,18 @@
+.contact-bg-img {
+    background-image: url(../Assests/cards_img/contactUs.png);
+    padding: 2rem 2rem;
+}
+
+.contact-bg-img h1 {
+    font-size: 4rem;
+    color: #fff;
+    margin: 8rem 0;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    padding: 8rem 0;
+    text-align: center;
+}

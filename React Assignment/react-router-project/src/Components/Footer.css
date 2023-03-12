@@ -1,0 +1,68 @@
+footer {
+    display: flex;
+    color: #fff;
+    background-color: #1B2124;
+    padding: 2rem 5rem;
+    justify-content: space-between;
+    font-size: 1.1rem;
+}
+
+.footer-start,
+.footer-middle,
+.footer-end {
+    width: 30%;
+}
+
+.footer-start {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.footer-logo {
+    width: 40%;
+}
+
+.iso-img {
+    width: 20%;
+}
+
+.social-media-icons {
+    display: flex;
+    gap: .5rem;
+    font-size: 1.5rem;
+}
+
+.social-media-icons .fa-brands:hover {
+    color: #386f73;
+    transition: 250ms ease-in-out;
+}
+
+.email {
+    font-weight: bold;
+    margin-left: .5rem;
+}
+
+.footer-middle .navigation {
+    display: flex;
+    margin-top: 1rem;
+    gap: 2rem;
+}
+
+footer li {
+    margin-top: .75rem;
+    font-weight: 500;
+    cursor: pointer;
+    width: fit-content;
+}
+
+footer li:hover {
+    opacity: 0.5;
+}
+
+.line {
+    height: 3px;
+    width: 40%;
+    background-color: #F7A654;
+    margin-top: 1rem;
+}

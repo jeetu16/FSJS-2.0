@@ -1,0 +1,23 @@
+.service {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 40%;
+}
+
+.service-img {
+    min-width: 100px;
+    max-width: 100px;
+}
+
+.service-img img{
+    width: 100%;
+}
+
+.service-txt h2 {
+    margin: 1rem 0 1rem;
+}
+
+.service-txt p {
+    font-size: 1.125rem;
+}

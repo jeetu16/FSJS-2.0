@@ -1,0 +1,26 @@
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    height: auto;
+    padding: 1rem;
+}
+
+.product-title {
+    font-weight: bold;
+    margin: 1rem 0;
+    font-size: 1.35rem;
+}
+
+.product:nth-child(1) .product-title,
+.product:nth-child(5) .product-title{
+    margin: 2rem 0 1rem;
+}
+
+.product-des {
+    font-size: 1.30rem;
+    text-align: center;
+    font-weight: 500;
+    color: rgb(83, 83, 83);
+}

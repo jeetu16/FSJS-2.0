@@ -1,0 +1,31 @@
+.course-card {
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #918d8d;
+    cursor: pointer;
+}
+
+.course-name {
+    color: #6759DD;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: .5rem 0 2rem;
+}
+
+.instructor {
+    color: #1e1e1e;
+    font-weight: 500;
+    margin: .5rem 0 1rem;
+    font-size: 1.125rem;
+}
+
+.c-price {
+    color: black;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.course-card:nth-child(1) .instructor,
+.course-card:nth-child(2) .instructor {
+    margin-top: 4rem;
+}

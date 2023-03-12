@@ -1,0 +1,50 @@
+.aboutUs-bg {
+    color: #fff;
+    padding: 3rem 2rem;
+    background-image: url(../Assests/cards_img/aboutUs.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.aboutUs-bg h1 {
+    font-size: 4rem;
+    margin: 2rem 0 3rem;
+}
+
+.aboutUs-bg p {
+    width: 50%;
+    font-size: 1.25rem;
+    word-spacing: 3px;
+    margin: 2rem 0 0;
+    line-height: 1.5;
+}
+
+.sub-mainHeading {
+    font-size: 3rem;
+    text-align: center;
+    color: #5A4BDA;
+    margin: 5rem 0;
+}
+
+.our-mission p {
+    font-size: 1.25rem;
+    width: 70%;
+    margin: auto;
+    color: #333;
+    font-weight: 500;
+    line-height: 1.5;
+    word-spacing: 3px;
+}
+
+.ourmission-img {
+    width: 40%;
+    margin: 5rem auto 5rem;
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 5rem 0;
+}

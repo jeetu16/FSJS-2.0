@@ -1,0 +1,18 @@
+.our-products {
+    padding: 2rem 0 10rem;
+}
+.products {
+    padding: 2rem 3rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    align-items: center;
+}
+
+.our-products h1 {
+    font-size: 3rem;
+    text-align: center;
+    color: #5A4BDA;
+    margin: 4rem 0 3rem;
+}
