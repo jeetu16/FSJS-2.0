@@ -1,0 +1,29 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "checked": false,
+      "title": "Learn react"
+    },
+    {
+      "id": 2,
+      "checked": false,
+      "title": "Do projects"
+    },
+    {
+      "id": 3,
+      "checked": false,
+      "title": "Go to gym"
+    },
+    {
+      "id": 4,
+      "checked": false,
+      "title": "Pay the electricity bill"
+    },
+    {
+      "id": 5,
+      "checked": true,
+      "title": "Hello world"
+    }
+  ]
+}
