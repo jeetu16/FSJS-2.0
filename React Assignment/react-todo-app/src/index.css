@@ -124,11 +124,18 @@ ul li::before {
   cursor: pointer;
 }
 
-.item svg:focus,
-.item svg:hover {
-  color: red;
+.item svg:nth-child(3) :focus,
+.item svg:nth-child(3) :hover {
+  color: #090950;
   outline: none;
 }
+
+.item svg:last-child :focus,
+.item svg:last-child :hover {
+  color: #ff0000;
+  outline: none;
+}
+
 
 .add-form {
   display: flex;

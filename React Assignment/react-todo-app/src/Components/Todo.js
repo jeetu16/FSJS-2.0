@@ -1,8 +1,10 @@
 import React from 'react';
 import { FaTrashAlt } from 'react-icons/fa';
+import { FaEdit } from 'react-icons/fa';
 
-const Todo = ({ item, handleClick, handleDelete }) => {
+const Todo = ({ item, handleClick, handleDelete, handleEdit }) => {
     return (
+        
         <li className='item' key={item.id}>
             <input
                 onChange={() => handleClick(item.id)}
@@ -15,6 +17,10 @@ const Todo = ({ item, handleClick, handleDelete }) => {
             >
                 {item.title}
             </label>
+            <FaEdit
+                role="button"
+                onClick={() => handleEdit(item.id)} 
+            />
             <FaTrashAlt
                 role="button"
                 tabIndex="0"

@@ -1,18 +1,26 @@
 import React from 'react';
 import Todo from './Todo';
+import Edit from './Edit';
 
 
-const TodoList = ({ items, handleClick, handleDelete }) => {
+const TodoList = ({ items, handleClick, handleDelete, handleEdit, updateItem, setUpdateItem }) => {
     return (
         <ul>
             {
                 items.map((item) => (
-                    <Todo
-                        key={item.id}
-                        item={item}
-                        handleClick={handleClick}
-                        handleDelete={handleDelete}
-                    />
+                    updateItem === item.id ?
+                        <Edit
+                            key={(item.id)}
+                            item={item}
+                        />
+                        :
+                        <Todo
+                            key={item.id}
+                            item={item}
+                            handleClick={handleClick}
+                            handleDelete={handleDelete}
+                            handleEdit={handleEdit}
+                        />
                 ))
             }
         </ul>
