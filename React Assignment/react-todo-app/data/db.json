@@ -2,28 +2,18 @@
   "items": [
     {
       "id": 1,
-      "checked": false,
-      "title": "Learn react"
+      "checked": true,
+      "title": "goto gym"
     },
     {
       "id": 2,
-      "checked": false,
-      "title": "Do projects"
+      "checked": true,
+      "title": "learn react"
     },
     {
       "id": 3,
-      "checked": false,
-      "title": "Go to gym"
-    },
-    {
-      "id": 4,
-      "checked": false,
-      "title": "Pay the electricity bill"
-    },
-    {
-      "id": 5,
       "checked": true,
-      "title": "Hello world"
+      "title": "do projects"
     }
   ]
 }
