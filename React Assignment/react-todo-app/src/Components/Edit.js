@@ -1,17 +1,38 @@
 import React from 'react';
 import { FaCheck } from 'react-icons/fa';
 
-const Edit = ({ item }) => {
+const Edit = ({
+    item,
+    updateItem,
+    setUpdateItem,
+    handleInputEdit,
+    focusRef
+}) => {
     return (
-        <form onSubmit={(e) => e.preventDefault()}>
+        <form className='form-edit' onSubmit={(e) => {
+            e.preventDefault();
+            setUpdateItem(-1);
+        }}>
             <input
+                autoFocus
                 type='text'
                 value={item.title}
-                // onChange={handleInputEdit}
+                onChange={(e) => {
+                    handleInputEdit(e.target.value, item.id)
+                }}
+                ref={focusRef}
+                required
             />
-            <button type='submit'>
-                <FaCheck />
-            </button>
+            <FaCheck
+                role="button"
+                tabIndex='0'
+                onClick={(e) => {
+                    focusRef.current.focus()
+                    item.title && setUpdateItem(-1);
+                    
+                }}
+            />
+
         </form>
     )
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaPlus } from 'react-icons/fa';
 
-const AddTodo = ({ handleSubmit, newItem, setNewItem, focusRef }) => {
+const AddTodo = ({ handleSubmit, newItem, setNewItem, focusRefAdd }) => {
     return (
         <form className='add-form' onSubmit={handleSubmit}>
             <input
@@ -11,7 +11,7 @@ const AddTodo = ({ handleSubmit, newItem, setNewItem, focusRef }) => {
                 placeholder='Add Todo'
                 required
                 value={newItem}
-                ref = { focusRef }
+                ref = { focusRefAdd }
                 onChange={(e) => setNewItem(e.target.value)}
 
             />

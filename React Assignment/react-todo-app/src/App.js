@@ -11,9 +11,9 @@ function App() {
   const [items, setItems] = useState(JSON.parse(localStorage.getItem('myTodoList')) || []);
   const [newItem, setNewItem] = useState('');
   const [searchItem, setSearchItem] = useState('');
-  const [isLoading, setIsLoading] = useState(true);
   const focusRef = useRef(null);
-  const [updateItem,setUpdateItem] = useState(-1);
+  const focusRefAdd = useRef(null);
+  const [updateItem, setUpdateItem] = useState(-1);
 
   useEffect(() => {
     localStorage.setItem("myTodoList", JSON.stringify(items));
@@ -38,7 +38,7 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    focusRef.current.focus();
+    focusRefAdd.current.focus();
     const arrStr = newItem.split("");
     const flag = arrStr.every((arr) => arr === " ");
     if (flag) return;
@@ -49,9 +49,10 @@ function App() {
   const handleEdit = (id) => {
     setUpdateItem(id);
   }
-  // const handleInputEdit = () => {
-
-  // }
+  const handleInputEdit = (value,num) => {
+    const newTodoList = items.map( (item) => item.id===num ? {...item,checked: false ,title : value }: item)
+    setItems(newTodoList);
+  }
   return (
     <div className="App">
       <Header />
@@ -60,7 +61,7 @@ function App() {
         handleSubmit={handleSubmit}
         newItem={newItem}
         setNewItem={setNewItem}
-        focusRef={focusRef}
+        focusRefAdd={focusRefAdd}
       />
       {items.length ?
         <SearchTodo
@@ -76,8 +77,10 @@ function App() {
           handleClick={handleClick}
           handleDelete={handleDelete}
           handleEdit={handleEdit}
-          updateItem = {updateItem}
-          setUpdateItem = {setUpdateItem}
+          updateItem={updateItem}
+          setUpdateItem={setUpdateItem}
+          handleInputEdit={handleInputEdit}
+          focusRef={focusRef}
         />
       </main>
       <Footer items={items} setItems={setItems} />

@@ -3,7 +3,16 @@ import Todo from './Todo';
 import Edit from './Edit';
 
 
-const TodoList = ({ items, handleClick, handleDelete, handleEdit, updateItem, setUpdateItem }) => {
+const TodoList = ({
+    items,
+    handleClick,
+    handleDelete,
+    handleEdit,
+    updateItem,
+    setUpdateItem,
+    handleInputEdit,
+    focusRef
+}) => {
     return (
         <ul>
             {
@@ -12,6 +21,10 @@ const TodoList = ({ items, handleClick, handleDelete, handleEdit, updateItem, se
                         <Edit
                             key={(item.id)}
                             item={item}
+                            updateItem={updateItem}
+                            setUpdateItem={setUpdateItem}
+                            handleInputEdit={handleInputEdit}
+                            focusRef={focusRef}
                         />
                         :
                         <Todo

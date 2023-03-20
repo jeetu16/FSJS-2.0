@@ -8,13 +8,13 @@ export default function Footer({ items, setItems }) {
       <p>
         {items.length} {items.length === 1 || items.length == 0 ? "Task" : "Tasks"}
       </p>
-      { items.length ? <p>{(items.filter((item) => !item.checked)).length} remaining tasks</p> : null }
+      { items.length ? <p>{(items.filter((item) => !item.checked)).length} Remaining</p> : null }
       {items.length ?
         <p>
           <FaTrashAlt
             role="button"
             onClick={() => setItems([])}
-          /> All Task
+          /> All
         </p>
         :
         null

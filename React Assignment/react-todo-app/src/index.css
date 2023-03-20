@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Sono:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Sono', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 html {
@@ -15,7 +15,7 @@ body {
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: skyblue;
+  background-image: linear-gradient(to left, #a84747,#6b105c);
 }
 
 .App {
@@ -25,7 +25,7 @@ body {
   align-items: center;
   height: 100vh;
   width: 100%;
-  max-width: 500px;
+  max-width: 700px;
   margin: auto;
 }
 
@@ -48,7 +48,7 @@ main {
   justify-content: flex-start;
   align-items: center;
   margin: .25rem 0;
-  padding : .25rem;
+  padding: .25rem;
   overflow-y: auto;
 }
 
@@ -68,12 +68,12 @@ footer {
 
 
 footer p:last-child:hover {
-  color:red;
+  color: red;
 }
 
 ul {
   list-style: none;
-  padding: 0.25rem 0;
+  padding: 0.35rem;
   width: 100%;
 }
 
@@ -88,10 +88,6 @@ ul li::before {
   padding: .5rem 0 .5rem .5rem;
   margin: .5rem 0;
   background-color: #eee;
-}
-
-.item:first-child {
-  margin: 0;
 }
 
 .item input[type="checkbox"] {
@@ -143,7 +139,7 @@ ul li::before {
   align-items: center;
   margin: .25rem 0;
   width: 100%;
-  padding: .25rem 0;
+  padding: .25rem;
 }
 
 .add-form label {
@@ -182,16 +178,34 @@ ul li::before {
   outline: none;
 }
 
-.loading {
-  display: grid;
-  flex-grow: 1;  
-  place-content: center;
+.form-edit {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  margin: 0.5rem 0;
+  background-color: #eee;
 }
 
-.error {
-  display: grid;
+.form-edit input {
   flex-grow: 1;
-  place-content: center;
-  color: red;
-  font-weight: 500;
+  font-size: 1rem;
+  outline: none;
+  padding: 0.25rem;
+  margin-right: .5rem;
+}
+
+.form-edit svg {
+  width: 48px;
+  min-width: 48px;
+  height: 36px;
+  font-size: 1rem;
+  color: rgb(32, 196, 32);
+  cursor: pointer;
+}
+
+.form-edit svg:focus,
+.form-edit svg:hover {
+  color: rgb(0, 83, 0);
+  outline: none;
 }
