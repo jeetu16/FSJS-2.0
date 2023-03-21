@@ -209,3 +209,9 @@ ul li::before {
   color: rgb(0, 83, 0);
   outline: none;
 }
+
+@media screen and (min-width: 375px) {
+  html {
+    font-size: 20px;
+  }
+}

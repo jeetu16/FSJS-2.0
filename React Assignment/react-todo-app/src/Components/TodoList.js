@@ -1,18 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Todo from './Todo';
 import Edit from './Edit';
+import { MyContext } from '../App';
 
 
-const TodoList = ({
-    items,
-    handleClick,
-    handleDelete,
-    handleEdit,
-    updateItem,
-    setUpdateItem,
-    handleInputEdit,
-    focusRef
-}) => {
+
+const TodoList = ({items}) => {
+
+    const { updateItem } = useContext(MyContext);
+
     return (
         <ul>
             {
@@ -21,18 +17,11 @@ const TodoList = ({
                         <Edit
                             key={(item.id)}
                             item={item}
-                            updateItem={updateItem}
-                            setUpdateItem={setUpdateItem}
-                            handleInputEdit={handleInputEdit}
-                            focusRef={focusRef}
                         />
                         :
                         <Todo
                             key={item.id}
                             item={item}
-                            handleClick={handleClick}
-                            handleDelete={handleDelete}
-                            handleEdit={handleEdit}
                         />
                 ))
             }
