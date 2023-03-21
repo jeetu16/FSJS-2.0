@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { useRef, useContext } from 'react';
 import { FaCheck } from 'react-icons/fa';
+import { MyContext } from '../App';
 
-const Edit = ({
-    item,
-    updateItem,
-    setUpdateItem,
-    handleInputEdit,
-    focusRef
-}) => {
+const Edit = ({ item }) => {
+
+    const { items, setItems, setUpdateItem } = useContext(MyContext);
+    const focusRef = useRef(null);
+
+
+    const handleInputEdit = (value, num) => {
+        const newTodoList = items.map((item) => item.id === num ? { ...item, checked: false, title: value } : item)
+        setItems(newTodoList);
+    }
+
     return (
         <form className='form-edit' onSubmit={(e) => {
             e.preventDefault();
@@ -28,8 +33,8 @@ const Edit = ({
                 tabIndex='0'
                 onClick={(e) => {
                     focusRef.current.focus()
-                    item.title && setUpdateItem(-1);
-                    
+                    item.title && false && setUpdateItem(-1);
+
                 }}
             />
 
