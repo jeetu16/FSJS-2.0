@@ -1,18 +1,21 @@
-import React, { useState, useRef, useContext } from 'react';
+import React, { useState, useRef } from 'react';
 import { FaPlus } from 'react-icons/fa';
-import { MyContext } from '../App';
+import { useDispatch, useSelector } from 'react-redux';
+import { addInTodoList } from '../features/todoList/todoList';
 
 const AddTodo = () => {
 
-    const { items, setItems} = useContext(MyContext);
+    // taking taking value from store using redux
+    const items = useSelector((state) => state.todosList.lists);
+    const dispatch = useDispatch();
+
     const [newItem, setNewItem] = useState('');
     const focusRefAdd = useRef(null);
 
     const addItem = async (title) => {
         const id = items.length ? items[items.length - 1].id + 1 : 1;
         const newTodo = { id, checked: false, title };
-        const listItemes = [...items, newTodo];
-        setItems(listItemes);
+        dispatch(addInTodoList(newTodo));
     }
 
     const handleSubmit = (e) => {
