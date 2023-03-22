@@ -1,22 +1,29 @@
 import React, { useRef, useContext } from 'react';
 import { FaCheck } from 'react-icons/fa';
 import { MyContext } from '../App';
+import { useSelector, useDispatch } from 'react-redux';
+import { setUpdateItem, updateTodoList } from '../features/todoList/todoList';
 
 const Edit = ({ item }) => {
 
-    const { items, setItems, setUpdateItem } = useContext(MyContext);
+    // Context API
     const focusRef = useRef(null);
+
+    // Redux
+    const items = useSelector((state) => state.todosList.lists);
+
+    const dispatch = useDispatch();
 
 
     const handleInputEdit = (value, num) => {
         const newTodoList = items.map((item) => item.id === num ? { ...item, checked: false, title: value } : item)
-        setItems(newTodoList);
+        dispatch(updateTodoList(newTodoList));
     }
 
     return (
         <form className='form-edit' onSubmit={(e) => {
             e.preventDefault();
-            setUpdateItem(-1);
+            dispatch(setUpdateItem(-1));
         }}>
             <input
                 autoFocus
@@ -33,7 +40,7 @@ const Edit = ({ item }) => {
                 tabIndex='0'
                 onClick={(e) => {
                     focusRef.current.focus()
-                    item.title && false && setUpdateItem(-1);
+                    item.title.length && dispatch(setUpdateItem(-1));
 
                 }}
             />
