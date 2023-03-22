@@ -2,13 +2,17 @@ import React, { useContext } from 'react';
 import { FaTrashAlt } from 'react-icons/fa';
 import { MyContext } from '../App';
 
+import { useSelector, useDispatch } from 'react-redux';
+import { deleteAllListItems } from '../features/todoList/todoList';
+
 
 
 export default function Footer() {
-  const { items, setItems } = useContext(MyContext);
-  const date = new Date().getFullYear();
-
   
+  // Redux
+  const items = useSelector((state) => state.todosList.lists);
+  const dispatch = useDispatch();
+
   return (
     <footer style={{ justifyContent: items.length ? "space-between" : "center" }}>
       <p>
@@ -19,7 +23,7 @@ export default function Footer() {
         <p>
           <FaTrashAlt
             role="button"
-            onClick={() => setItems([])}
+            onClick={() => dispatch(deleteAllListItems())}
           /> All
         </p>
         :
