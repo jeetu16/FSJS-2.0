@@ -2,12 +2,15 @@ import React, { useContext } from 'react';
 import Todo from './Todo';
 import Edit from './Edit';
 import { MyContext } from '../App';
+import { useSelector } from 'react-redux';
 
 
 
 const TodoList = ({items}) => {
 
-    const { updateItem } = useContext(MyContext);
+    // Redux
+    const updateItem = useSelector((state) => state.todosList.updateItem);
+    // const { updateItem } = useContext(MyContext);
 
     return (
         <ul>
