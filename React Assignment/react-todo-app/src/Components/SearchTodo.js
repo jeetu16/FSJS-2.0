@@ -4,6 +4,7 @@ import { setSearchItem } from '../features/todoList/todoList';
 
 const SearchTodo = () => {
 
+    // react-redux
     const dispatch = useDispatch();
     const searchItem = useSelector((state) => state.todosList.searchItem);
     

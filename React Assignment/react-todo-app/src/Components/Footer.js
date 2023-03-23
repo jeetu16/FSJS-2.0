@@ -1,15 +1,11 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { FaTrashAlt } from 'react-icons/fa';
-import { MyContext } from '../App';
-
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteAllListItems } from '../features/todoList/todoList';
 
-
-
 export default function Footer() {
   
-  // Redux
+  // react-redux
   const items = useSelector((state) => state.todosList.lists);
   const dispatch = useDispatch();
 

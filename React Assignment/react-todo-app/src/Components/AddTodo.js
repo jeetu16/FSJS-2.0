@@ -5,17 +5,18 @@ import { addInTodoList } from '../features/todoList/todoList';
 
 const AddTodo = () => {
 
-    // taking taking value from store using redux
+    // taking taking value from store using react-redux
     const items = useSelector((state) => state.todosList.lists);
     const dispatch = useDispatch();
 
+    // creating a state for storing new todo list item
     const [newItem, setNewItem] = useState('');
     const focusRefAdd = useRef(null);
 
     const addItem = async (title) => {
         const id = items.length ? items[items.length - 1].id + 1 : 1;
         const newTodo = { id, checked: false, title };
-        dispatch(addInTodoList(newTodo));
+        dispatch(addInTodoList(newTodo));  // storing new todo list item using react-redux
     }
 
     const handleSubmit = (e) => {
@@ -28,7 +29,6 @@ const AddTodo = () => {
         setNewItem('');
     }
 
-
     return (
         <form className='add-form' onSubmit={handleSubmit}>
             <input
@@ -40,19 +40,14 @@ const AddTodo = () => {
                 value={newItem}
                 ref={focusRefAdd}
                 onChange={(e) => setNewItem(e.target.value)}
-
             />
             <label htmlFor="add-todo">
                 Add Items
             </label>
-            <button
-                className='add-btn'
-                type='submit'
-            >
+            <button className='add-btn' type='submit'>
                 <FaPlus />
             </button>
         </form>
     )
 }
-
 export default AddTodo

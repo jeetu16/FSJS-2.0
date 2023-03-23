@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+// this is the place where all the states of todo list data handle by the redux toolkit
 const initialState = {
     lists : JSON.parse(localStorage.getItem("myTodoList")) || [],
     updateItem : -1,
@@ -27,6 +28,6 @@ export const todoList = createSlice({
         }
     }
 })
-
 export const { addInTodoList, updateTodoList, deleteAllListItems, setUpdateItem, setSearchItem } = todoList.actions;
+
 export default todoList.reducer;
