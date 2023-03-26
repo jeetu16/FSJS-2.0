@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
 import mainImg from '../Assests/main_logo/PWSkills-main.png'
