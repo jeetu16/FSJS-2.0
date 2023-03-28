@@ -2,11 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const MovieCard = ({ movie }) => {
+
+
   const posterPath = "https://image.tmdb.org/t/p/w500/";
   return (
     <Link
+      to="/movieDetails" state={{movieName:movie.title || movie.name}}
       className=' cursor-pointer hover:opacity-90'
-      onClick={() => alert(movie.title || movie.name)}
     >
       <div className='rounded-md w-full shadow shadow-black h-72 sm:h-96'>
         <img className='w-full rounded-md h-full' src={`${posterPath}${movie.poster_path}`} alt="poster" />

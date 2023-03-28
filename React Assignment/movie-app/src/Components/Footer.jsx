@@ -9,6 +9,4 @@ const Footer = () => {
     )
 }
 
-// api key : 
-// api base url : 
 export default Footer

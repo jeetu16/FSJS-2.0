@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import TrendingMovies from "./Components/Pages/TrendingMovies";
 import Layout from "./Layout/Layout";
 import MovieDetails from "./Components/Pages/MovieDetails";
+import SearchResult from "./Components/Pages/SearchResult";
 // import React, { useContext } from "react";
 // import MyDataContext from "./Context/MyDataContext";
 
@@ -39,17 +40,19 @@ function App() {
         {
           path: "/movieDetails",
           element: <MovieDetails />
+        },
+        {
+          path: "/searchResult",
+          element: <SearchResult />
         }
       ]
     }
-    
+
   ])
 
   return (
     <DataProvider>
-      <div className="flex h-full flex-col">
-        <RouterProvider router={router} />
-      </div>
+      <RouterProvider router={router} />
     </DataProvider>
   )
 }

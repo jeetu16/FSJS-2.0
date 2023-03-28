@@ -1,8 +1,7 @@
 import React, { useContext } from 'react'
 import { Outlet } from 'react-router-dom';
 import MyDataContext from '../Context/MyDataContext';
-import CategoriesMovies from './Categories/CategoriesMovies';
-import CategoriesTvShows from './Categories/CategoriesTvShows';
+import CategoriesMoviesShows from './Categories/CategoriesMoviesShows';
 const Main = () => {
 
   const { top_rated_movie, trending_movie, top_rated_tvShows, trending_tvShows } = useContext(MyDataContext);
@@ -10,10 +9,10 @@ const Main = () => {
   return (
     <main className='flex-grow p-4'>
       <Outlet />
-      <CategoriesMovies movieCategory={trending_movie} />
-      <CategoriesMovies movieCategory={top_rated_movie} />
-      <CategoriesMovies movieCategory={trending_tvShows} />
-      <CategoriesMovies movieCategory={top_rated_tvShows} />
+      <CategoriesMoviesShows movieCategory={trending_movie} />
+      <CategoriesMoviesShows movieCategory={top_rated_movie} />
+      <CategoriesMoviesShows movieCategory={trending_tvShows} />
+      <CategoriesMoviesShows movieCategory={top_rated_tvShows} />
     </main>
   )
 }

@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
-import { Link,Outlet } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
@@ -14,8 +14,8 @@ const Header = () => {
         e.preventDefault();
         focusOnSearch.current.focus();
         // alert(searchMovie);
-        navigate('/movieDetails', { state :searchMovie } )
-
+        navigate(`/searchResult`, { state :searchMovie } )
+        setSearchMovie("");
     }
 
     return (
