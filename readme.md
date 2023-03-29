@@ -16,4 +16,6 @@ In this repo, I have share all my learnings, practices, projects and articles wh
 ## Projects (Tailwind CSS)
 - [Source Code](./Projects%20(Tailwind)/)
 
+## React Assignment
+- [Source Code](./React%20Assignment/)
 
