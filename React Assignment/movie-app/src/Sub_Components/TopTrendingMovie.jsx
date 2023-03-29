@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react'
-import { getCategoriesMovies } from '../api/fetchAPI'
+import { getMoviesList } from '../api/fetchAPI'
 
 const TopTrendingMovie = ({ trendingMovie }) => {
 
     const [trendMovie,setTrendMovie] = useState({});
     useEffect( ()=> {
-        getCategoriesMovies(trendingMovie.url).then(data => setTrendMovie(data.results[0]))
+        getMoviesList(trendingMovie.url).then(data => setTrendMovie(data.results[0]))
     })
   return (
-      <div className='h-screen bg-no-repeat bg-center bg-contain' style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w500/cCzCClIzIh81Fa79hpW5nXoUsHK.png)`}}>
+    <div className='h-screen bg-no-repeat bg-center bg-contain' style={{ backgroundImage: `https://image.tmdb.org/t/p/w500${trendMovie.poster_path}`}}>
     </div>
   )
 }

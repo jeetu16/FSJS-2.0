@@ -37,9 +37,22 @@ const TrendingMovies = ({ movieCollection }) => {
     fetchData();
   }, [pageNum]);
 
-  console.log(movieList);
   return (
     <>
+      {
+        correct
+        &&
+        <div className="flex items-center justify-center place-content-center">
+          <div
+            className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
+            role="status">
+            <span
+              className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+            >Loading...</span
+            >
+          </div>
+        </div>
+      }
       {
         movieList
         &&
@@ -47,15 +60,12 @@ const TrendingMovies = ({ movieCollection }) => {
 
           <h2 className='text-center text-3xl font-bold my-8 mb-16 underline decoration-indigo-700 decoration-4 underline-offset-8'>{moviesListObj.heading}</h2>
 
-
-
-          <div className='grid grid-cols-2 gap-4 sm:grid-cols-5'>
+          <div className='grid grid-cols-2 gap-4 sm:grid-cols-4 sm:px-4 sm:gap-8'>
             {movieList.results.map((movie) => <MovieCard key={movie.id} movie={movie} />)}
           </div>
 
-
           <div className='flex justify-center gap-4 items-center mt-8 mb-4'>
-            <Link
+            <button
               // to={`/${movieList.id}/${pageNum}`}
               style={pageNum === 1 ? { cursor: "not-allowed", backgroundColor: "#b8bbf2", color: "#000" } : null}
               className='px-6 py-2 bg-indigo-600 hover:opacity-80 rounded-full text-white cursor-pointer'
@@ -63,9 +73,9 @@ const TrendingMovies = ({ movieCollection }) => {
               disabled={pageNum === 1}
             >
               Prev
-            </Link>
+            </button>
             <p className='text-xl font-medium '>{pageNum}</p>
-            <Link
+            <button
               // to={`/${movieList.id}/${pageNum}`}
               style={pageNum === Number(movieList.total_pages) ? { cursor: "not-allowed", backgroundColor: "#b8bbf2", color: "#000" } : null}
               className='px-6 py-2 bg-indigo-600 hover:opacity-80 rounded-full text-white cursor-pointer'
@@ -73,7 +83,7 @@ const TrendingMovies = ({ movieCollection }) => {
               disabled={pageNum === Number(movieList.total_pages)}
             >
               Next
-            </Link>
+            </button>
           </div>
         </div>
       }

@@ -1,26 +1,19 @@
-import paper from './paper.png';
-import scissors from './scissors.png';
+import React from "react";
+import rock from './assets/rock.png';
+import paper from './assets/paper.png';
+import scissors from './assets/scissors.png'
 
 function App() {
 
   return (
-    <>
-      <h1 className='text-3xl w-max my-2 mx-auto font-semibold'>Grid</h1>
-      <div className='h-screen grid grid-cols-2 gap-2 px-2 py-1'>
-        <div className='bg-black h-full col-span-2 row-span-2'></div>
-        <div className='bg-red-600 h-full row-span-2'></div>
-        <div className='bg-blue-600 h-full'></div>
-        <div className='bg-yellow-600 h-full'></div>
+    <div className="flex flex-col bg-gradient-to-l from-blue-800 via-yellow-600 to-green-800 w-full h-screen justify-end items-center pb-10 gap-8">
+      <h2 className="text-2xl text-white font-bold">Select Your Option</h2>
+      <div className="flex">
+        <img className="transform hover:scale-110 transition-all" src={paper} alt="paper" />
+        <img className="transform hover:scale-110 transition-all" src={rock} alt="" />
+        <img className="transform hover:scale-110 transition-all" src={scissors} alt="paper" />
       </div>
-      <h2 className='text-3xl w-max my-2 mx-auto font-semibold'>Flexbox</h2>
-      <div className='flex'>
-        <div className='bg-blue-500 text-white p-1 order-4'>Item 1</div>
-        <div className='bg-black text-white p-1 grow'>Item 2</div>
-        <div className='bg-green-500 text-white p-1 grow'>Item 3</div>
-        <div className='bg-red-500 text-white p-1 order-first shrink'>Item 4</div>
-        
-      </div>
-    </>
+    </div>
   )
 }
 

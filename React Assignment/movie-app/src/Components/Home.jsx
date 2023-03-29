@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { Outlet } from 'react-router-dom';
 import MyDataContext from '../Context/MyDataContext';
+import TopTrendingMovie from '../Sub_Components/TopTrendingMovie';
 import CategoriesMoviesShows from './Categories/CategoriesMoviesShows';
 const Main = () => {
 

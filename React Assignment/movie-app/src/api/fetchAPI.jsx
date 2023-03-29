@@ -21,20 +21,9 @@ export const getMovieDetails = async (title) => {
     return response.data;
 }
 
+export const getSearchMovies = async (search,page=1) => {
+    const response = await axiosBaseOMDB.get(`?s=${search}&apikey=${API_Key_OMDB}&page=${page}`);
+    return response.data;
+}
 
-//https://www.omdbapi.com/?t=avengers&apikey=20147ab1
 
-// t=avengers&apikey=20147ab1
-
-//  url: "trending/tv/day",
-//  url: "tv/top_rated",
-
-// export const getMovieDetails = async (categoryURL) => {
-//     const response = await axiosBase.get()
-// }
-
-// https://api.themoviedb.org/3/movie/top_rated?api_key=184792dceb0eb96a0680ddff7329c877&language=en-US&page=1
-
-// trending/movie/day - trending
-
-// movie/top_rated - top-rated

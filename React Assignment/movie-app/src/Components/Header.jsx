@@ -13,8 +13,8 @@ const Header = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         focusOnSearch.current.focus();
-        // alert(searchMovie);
         navigate(`/searchResult`, { state :searchMovie } )
+        window.location.reload(true);
         setSearchMovie("");
     }
 
@@ -22,7 +22,7 @@ const Header = () => {
         <>
             <header className='bg-indigo-700 flex flex-col items-center p-2 text-white sm:flex-row sm:items-center sm:justify-around sticky top-0 z-10'>
                 <div className='sm:w-1/2 text-center py-2'>
-                    <Link to="/" className='text-2xl font-bold font-mono sm:text-4xl'>MovieBuzz</Link>
+                    <Link to="/" className='text-2xl font-bold font-mono sm:text-4xl tracking-wide'><span className="font-serif text-orange-500 ">M</span>ovie<span className='font-serif text-[papayawhip]'>B</span>uzz</Link>
                 </div>
                 <form className='flex items-center justify-center mt-2 w-full px-2 text-xl text-black pb-1 sm:w-1/2' onSubmit={(e) => handleSubmit(e)}>
                     <input
