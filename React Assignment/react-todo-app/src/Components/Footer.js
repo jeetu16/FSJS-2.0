@@ -12,7 +12,7 @@ export default function Footer() {
   return (
     <footer style={{ justifyContent: items.length ? "space-between" : "center" }}>
       <p>
-        {items.length} {items.length === 1 || items.length == 0 ? "Task" : "Tasks"}
+        {items.length} {items.length === 1 || items.length === 0 ? "Task" : "Tasks"}
       </p>
       {items.length ? <p>{(items.filter((item) => !item.checked)).length} Remaining</p> : null}
       {items.length ?
