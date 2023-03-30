@@ -37,6 +37,8 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: sticky;
+  top: 0;
 
 }
 
@@ -63,6 +65,8 @@ footer {
   color: #fff;
   display: flex;
   align-items: center;
+  position: sticky;
+  bottom: 0;
 }
 
 
@@ -88,6 +92,12 @@ ul li::before {
   padding: .5rem 0 .5rem .5rem;
   margin: .5rem 0;
   background-color: #eee;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.item:nth-child(odd) {
+  background-color: #c8c8cc;
 }
 
 .item input[type="checkbox"] {
@@ -109,6 +119,7 @@ ul li::before {
   font-size: .75rem;
   flex-grow: 1;
   word-wrap: break-word;
+  cursor: pointer;
 }
 
 .item svg {
@@ -151,11 +162,12 @@ ul li::before {
   flex-grow: 1;
   max-width: calc(100%-50px);
   min-height: 48px;
-  padding: 0.25rem;
+  padding: 0.25rem 0.75rem;
   font-size: 1rem;
   margin-right: .25rem;
   outline: none;
-  border-radius: 3px;
+  border-radius: 50px;
+  border: none;
 
 }
 
@@ -163,12 +175,15 @@ ul li::before {
   font-size: 48px;
   height: 48px;
   min-width: 48px;
-  border-radius: 3px;
+  border-radius: 30px;
   cursor: pointer;
   background-color: #e0eefa;
   color: #020279;
   font-size: 1rem;
   padding: 0.5rem;
+  border: none;
+  display: grid;
+  place-content: center;
 }
 
 .add-btn:hover,
