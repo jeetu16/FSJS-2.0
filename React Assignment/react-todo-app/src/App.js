@@ -25,6 +25,23 @@ function App() {
         <Content
           items={myList.filter((item) => item.title.toLowerCase().includes(searchItem.toLowerCase()))}
         />
+        {
+          !myList.some((item) => item.title.toLowerCase().includes(searchItem.toLowerCase()))
+          &&
+          myList.length !== 0
+          &&
+          <div style={{ marginTop: "2rem", fontSize: "1.5rem", color: "papayawhip", display: "grid", placeContent: "center", height: "50vh" }}>
+            Not found
+          </div>
+        }
+
+        {
+          !searchItem
+          &&
+          myList.length === 0
+          &&
+          <div style={{ marginTop: "2rem", fontSize: "1.5rem", color: "papayawhip", display: "grid", placeContent: "center", height: "50vh" }}>Your Todo List is empty</div>
+        }
       </main>
       <Footer />
     </div >
