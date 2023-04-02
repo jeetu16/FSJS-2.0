@@ -20,7 +20,7 @@ function App() {
     <div className="App">
       <Header />
       <AddTodo />
-      {myList.length ? <SearchTodo /> : null}
+      { myList.length > 5 ? <SearchTodo /> : null}
       <main>
         <Content
           items={myList.filter((item) => item.title.toLowerCase().includes(searchItem.toLowerCase()))}
