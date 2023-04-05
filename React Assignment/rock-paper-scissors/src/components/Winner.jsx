@@ -90,7 +90,7 @@ const Winner = ({border , winner, userChoice, computerChoice, setBorder, setResu
       {
         border
         &&
-        <button className={`text-2xl rounded-lg hover:bg-[#0c0c36] border p-4 absolute ${screen.height < 690 ? 'bottom-2': 'bottom-20'} right-1/2 translate-x-1/2 sm:text-2xl sm:bottom-6 sm:p-2 bg-[#04044e] `} onClick={() => handleClose()}>
+        <button className={`text-2xl rounded-lg hover:bg-[#0c0c36] border p-4 absolute ${screen.height < 690 ? 'bottom-2': 'bottom-20'} right-1/2 translate-x-1/2 sm:text-2xl sm:bottom-6 sm:p-2 bg-[#04044e] text-red-900`} onClick={() => handleClose()}>
           Continue
         </button>
       }
