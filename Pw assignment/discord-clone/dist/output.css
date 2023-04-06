@@ -546,6 +546,10 @@ video {
   top: 2rem;
 }
 
+.m-auto{
+  margin: auto;
+}
+
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -559,6 +563,11 @@ video {
 .my-6{
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+}
+
+.my-auto{
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .mb-12{
@@ -711,6 +720,10 @@ video {
 
 .bg-\[url\(\'\.\.\/assets\/bgLeft\.svg\'\)\]{
   background-image: url('../assets/bgLeft.svg');
+}
+
+.bg-no-repeat{
+  background-repeat: no-repeat;
 }
 
 .p-2{
