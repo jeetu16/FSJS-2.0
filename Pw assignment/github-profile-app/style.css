@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: #0D1117;
+}
+
+header {
+
+    padding: 10px 20px;
+    background-color: #161B22;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header h1 {
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.search-form {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.search-form input,
+.search-form button {
+    background-color: #0D1117;
+    outline: none;
+    border: none;
+    color: #fff;
+    padding: 1rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.search-form input {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.search-form button {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-left: 1px solid rgb(34, 34, 34);
+}
+
+.search-form button:hover {
+    opacity: 0.7;
+}
+
+.search-form button:active {
+    transform: scale(.93);
+}
+
+main {
+    color: white;
+}
+
+.card {
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+.avatar {
+    width: 200px;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 50%;
+    outline: 1px solid #fff;
+}
+
+.avatar img {
+    width: 100%;
+}
+
+.info {
+    margin-top: 1rem;
+}
+
+.follow-info {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+#fullName {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+#userName {
+    text-align: center;
+}
+
+#gitProfile {
+    text-decoration: none;
+    color: white;
+    font-size: 1.15rem;
+    margin-top: 2rem;
+}
+
+#gitProfile:hover {
+    color: blue;
+    text-decoration: underline;
+    transition: all 250ms;
+}
+
+.repos {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    gap: 10px;
+}
+
+.repoCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 7px;
+    border: .5px solid white;
+}
+
+
+
+@media screen and (min-width: 640px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .repos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .avatar {
+        width: 300px;
+    }
+
+    #fullName {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    #userName {
+        text-align: center;
+        font-size: 1.5rem;
+        margin: .75rem;
+    }
+
+    #gitProfile {
+        text-decoration: none;
+        color: white;
+        font-size: 1.15rem;
+        margin-top: 2rem;
+    }
+    .follow-info span {
+        font-size: 1.25rem;
+    }
+
+}

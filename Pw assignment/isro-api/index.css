@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    font-size: 18px;
+}
+
+header {
+    padding: 1rem;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    background-color: darkslateblue;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.25rem;
+}
+
+header ul {
+    display: flex;
+    gap: 1rem;
+}
+
+header ul a {
+    color: white;
+}
+
+.mainContainer {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.rocketContainer {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.spaceCraft {
+    border-radius: 7px;
+    background-color: beige;
+    padding: 0.5rem;
+}
+
+.mainHeadiing {
+    text-align: center;
+    margin: 2rem;
+    font-size: 1.5rem;
+}
+
+@media screen and (min-width:650px) {
+    header {
+        justify-content: space-around;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header ul {
+        gap: 4rem;
+    }
+
+    .mainContainer {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .rocketContainer {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .mainHeadiing {
+        font-size: 2rem;
+    }
+}

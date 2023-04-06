@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Clone</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header class="bg-[#404EED] p-4 relative bg-[url('../assets/bgLeft.svg')]">
+        <section class="px-4">
+            <nav class=" flex justify-between">
+                <div class="text-white flex items-center gap-2 font-bold">
+                    <i class="fa-brands fa-discord text-2xl"></i>
+                    <h2 class="text-xl">Discord</h2>
+                </div>
+                <div class="text-white flex items-center gap-4 sm:hidden">
+                    <button class="text-black text-md rounded-full bg-white py-1 px-2">Open Discord</button>
+                    <i class="fa-solid fa-bars text-2xl" id="toggleBtn"></i>
+                </div>
+                <div class="bg-white absolute w-4/5 right-0 top-0 p-8 rounded-l-md h-screen hidden" id="navLinks">
+                    <i class="fa-sharp fa-solid fa-xmark absolute right-4 top-8" id="rmSideBar"></i>
+                    <div class="text-black flex items-center gap-2 font-bold">
+                        <i class="fa-brands fa-discord text-2xl"></i>
+                        <h2 class="text-xl">Discord</h2>
+                    </div>
+                    <hr class="mt-6 mb-4">
+                    <ul>
+                        <li class="py-2 pl-3 bg-[#F6F6F6] rounded text-[#7FD5F6]">Home</li>
+                        <li class="py-2 pl-3">Download</li>
+                        <li class="py-2 pl-3">Nitro</li>
+                        <li class="py-2 pl-3">Discover</li>
+                        <li class="py-2 pl-3">Safety</li>
+                        <li class="py-2 pl-3">Mod Academy</li>
+                        <li class="py-2 pl-3">Support</li>
+                        <li class="py-2 pl-3">Blog</li>
+                        <li class="py-2 pl-3">Careers</li>
+                    </ul>
+
+                    <button
+                        class="text-xl py-2 px-8 bg-[#5865F2] rounded-full w-fit text-white hover:shadow-sm hover:shadow-slate-700 text-center mx-auto absolute bottom-4">
+                        <i class="fa-solid fa-arrow-down-long align-baseline mr-2"></i> Download for Windows</button>
+                </div>
+                <ul class="hidden sm:flex text-white sm:gap-6 sm:items-center sm:font-semibold">
+                    <li class="cursor-pointer">Download</li>
+                    <li class="cursor-pointer">Nitro</li>
+                    <li class="cursor-pointer">Discover</li>
+                    <li class="cursor-pointer">Safety</li>
+                    <li class="cursor-pointer">Support</li>
+                    <li class="cursor-pointer">Blog</li>
+                    <li class="cursor-pointer">Careers</li>
+                </ul>
+                <button class="hidden sm:block bg-white rounded-full p-2 px-3">Open Discord</button>
+            </nav>
+            <div class="mt-20 text-white sm:py-10 sm:text-center ">
+                <h1 class="uppercase text-4xl text-white font-newFont tracking-wider mb-4 sm:text-[4rem]">IMAGINE A
+                    PLACE...</h1>
+                <p class="sm:w-1/2 sm:mx-auto sm:my-8">...where you can belong to a school club, a gaming group, or a
+                    worldwide art community. Where just you and a handful of
+                    friends can spend time together. A place that makes it easy to talk every day and hang out more
+                    often.</p>
+                <button
+                    class="text-lg px-6 py-4 mt-8 my-4 bg-white rounded-full w-fit text-black hover:shadow-sm hover:shadow-slate-700">
+                    <i class="fa-solid fa-arrow-down-long align-baseline"></i> Download for Windows</button>
+                <button
+                    class="text-lg px-6 py-4 my-4 bg-[#23272A] rounded-full w-fit  hover:shadow-sm hover:shadow-slate-700 sm:ml-4">Open
+                    Discord in your browser</button>
+            </div>
+        </section>
+    </header>
+    <main class=" pt-10">
+        <div class="px-4 py-14 sm:flex sm:mx-auto">
+            <div class="sm:w-1/2">
+                <img src="../assets/studyGroup.svg" alt="studyGroup">
+            </div>
+            <div class="sm:w-1/2">
+                <h2 class="font-bold text-xl my-6 sm:text-5xl sm:w-2/4 sm:mx-auto">Create an invite-only place where you
+                    belong</h2>
+                <p class="text-[#23272A] sm:text-xl sm:w-2/4 sm:mx-auto">Discord servers are organized into topic-based
+                    channels where you can collaborate, share, and just talk about your day
+                    without clogging up a group chat.</p>
+            </div>
+        </div>
+        <div class="px-4 py-14 bg-[#F6F6F6] sm:flex sm:mx-auto">
+            <div class="sm:w-1/2">
+                <h2 class="font-bold text-xl my-6 sm:text-5xl sm:w-2/4 sm:mx-auto">Where hanging out is easy</h2>
+                <p class="text-[#23272A] sm:text-xl sm:w-2/4 sm:mx-auto">Grab a seat in a voice channel when you’re
+                    free. Friends in your server can
+                    see you’re around and instantly pop in to
+                    talk without having to call.</p>
+            </div>
+            <div class="sm:w-1/2">
+                <img src="../assets/voiceConnected.svg" alt="voiceConnected">
+            </div>
+        </div>
+        <div class="px-4 py-14 sm:flex sm:mx-auto">
+            <div class="sm:w-1/2">
+                <img src="../assets/coach.svg" alt="coach">
+            </div>
+            <div class="sm:w-1/2">
+                <h2 class="font-bold text-xl my-6 sm:text-5xl sm:w-2/4 sm:mx-auto">From few to a fandom</h2>
+                <p class="text-[#23272A] sm:text-xl sm:w-2/4 sm:mx-auto">Get any community running with moderation tools
+                    and custom member access. Give
+                    members special powers, set up private
+                    channels, and more.</p>
+            </div>
+        </div>
+        <div class="px-4 py-14 bg-[#F6F6F6] sm:py-20">
+            <h2 class="text-4xl font-newFont sm:text-center sm:text-[5rem] sm:mt-4">RELIABLE TECH FOR STAYING CLOSE</h2>
+            <p class="text-[#23272A] py-4 sm:w-3/4 sm:mx-auto sm:text-xl sm:mt-5 sm:text-center">Low-latency voice and
+                video feels like you’re in the same room. Wave hello
+                over video, watch friends stream their games,
+                or gather up and have a drawing session with screen share.</p>
+            <div>
+                <img class="sm:w-4/5 sm:mx-auto" src="../assets/justChil.svg" alt="justChil">
+            </div>
+            <h2 class="text-4xl font-bold my-6 mb-12 sm:text-center">Ready to start your journey?</h2>
+            <button
+                class="text-xl py-4 px-8 bg-[#5865F2] rounded-full w-fit text-white hover:shadow-sm hover:shadow-slate-700 text-center mx-auto">
+                <i class="fa-solid fa-arrow-down-long align-baseline mr-2"></i> Download for Windows</button>
+        </div>
+    </main>
+    <footer class="px-4 py-10 bg-[#23272A] text-white">
+        <div class="sm:flex justify-between">
+            <div class="sm:w-1/5 sm:mt-10">
+                <h2 class="text-[#5865D2] font-newFont text-4xl w-1/2">IMAGINE A PLACE</h2>
+                <div class="my-4">
+                    <div>
+                        <img class="w-8 inline-block align-middle" src="../assets/flag.png" alt="">
+                        <span>English, USA</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="mt-4 text-2xl">
+                        <i class="mr-4 fa-brands fa-twitter"></i>
+                        <i class="mr-4 fa-brands fa-instagram"></i>
+                        <i class="mr-4 fa-brands fa-facebook"></i>
+                        <i class="mr-4 fa-brands fa-youtube"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-10 py-8 sm:grid-cols-4 sm:gap-0 sm:w-3/5">
+                <ul class="flex flex-col gap-2">
+                    <li class="text-[#2331BE]">Product</li>
+                    <li>Download</li>
+                    <li>Nitro</li>
+                    <li>Status</li>
+                </ul>
+                <ul class="flex flex-col gap-2">
+                    <li class="text-[#2331BE]">Company</li>
+                    <li>About</li>
+                    <li>Jobs</li>
+                    <li>Branding</li>
+                    <li>Newsroom</li>
+                </ul>
+                <ul class="flex flex-col gap-2">
+                    <li class="text-[#2331BE]">Resources</li>
+                    <li>College</li>
+                    <li>Support</li>
+                    <li>Safety</li>
+                    <li>Blog</li>
+                    <li>Feedback</li>
+                    <li>Build</li>
+                    <li>StreamKit</li>
+                    <li>Creators</li>
+                    <li>Community</li>
+                </ul>
+                <ul class="flex flex-col gap-2">
+                    <li class="text-[#2331BE]">Policies</li>
+                    <li>Terms</li>
+                    <li>Privacy</li>
+                    <li>Cookie Setting</li>
+                    <li> Guidelines</li>
+                    <li>Acknowledgements</li>
+                    <li>Licenses</li>
+                    <li>Moderation</li>
+                </ul>
+            </div>
+        </div>
+        <hr class="bg-indigo-800">
+        <div class="mt-6 flex justify-between">
+            <div class="text-white flex items-center gap-2 font-bold">
+                <i class="fa-brands fa-discord text-2xl"></i>
+                <h2 class="text-xl">Discord</h2>
+            </div>
+            <button class="bg-[#5865F2] rounded-full p-2 px-3">Open Discord</button>
+        </div>
+
+    </footer>
+    <script src="./index.js"></script>
+</body>
+
+</html>

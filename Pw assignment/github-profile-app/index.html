@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Github Profile App</title>
+    </head>
+<body>
+    <header>
+        <h1> <i class="fa-brands fa-github"></i> Github User Profile</h1>
+        <form class="search-form">
+            <input required type="text" placeholder="Search User Profile"> 
+            <button>Search</button>
+        </form>
+    </header>
+    <main class="container">
+        <div class="card">
+            <div class="avatar">
+                <img id="userImg" src="https://unsplash.it/200/200" alt="">
+            </div>
+            <div class="info">
+                <h2 id="fullName">Profile Name</h2>
+                <p id="userName">profile_username</p>
+                <div class="follow-info">
+                    <div>
+                        <span id="followers">123</span>
+                        <span>Followers</span>
+                    </div>
+                    <div>
+                        <span id="following">123</span>
+                        <span>Following</span>
+                    </div>
+                    <div>
+                        <span id="userRepos">123</span>
+                        <span>Public Repos</span>
+                    </div>
+                </div>
+            </div>
+            <a id="gitProfile" href="/">Visit Github Profile ></a>
+        </div>
+        <div class="repos">
+            <div class="">
+                <h2>Repo Name</h2>
+                <a href="/">Take a look at this repo ></a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="">Copyright@2023</footer>
+    <script src="index.js"></script>
+</body>
+</html>
