@@ -1,7 +1,7 @@
 # Problem 1
 
 - [Source Code](./discord-clone/)
-- [Live Link](https://discord-clone-by-tailwindcss.netlify.app/)
+- [Live Link](https://dazzling-discord-clone.netlify.app/)
 
 
 # Problem 2
