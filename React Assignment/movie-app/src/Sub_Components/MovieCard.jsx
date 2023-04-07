@@ -8,7 +8,7 @@ const MovieCard = ({ movie }) => {
   return (
     <Link
       to="/movieDetails" state={{movieName:movie.title || movie.name || movie.Title}}
-      className=' cursor-pointer hover:opacity-90'
+      className=' cursor-pointer hover:opacity-90 hover:scale-105 transition-all'
     >
       <div className='rounded-md w-full shadow shadow-black h-72 sm:h-96'>
         <img className='w-full rounded-md h-full' src={movie.Poster===undefined ? `${posterPath}${movie.poster_path}` : movie.Poster } alt="poster" />
