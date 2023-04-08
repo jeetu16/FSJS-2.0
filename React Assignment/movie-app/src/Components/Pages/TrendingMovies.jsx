@@ -1,15 +1,20 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { getMoviesList } from '../../api/fetchAPI';
 import MyDataContext from '../../Context/MyDataContext';
 import MovieCard from '../../Sub_Components/MovieCard'
 
 const TrendingMovies = ({ movieCollection }) => {
 
-  const [pageNum, setPageNum] = useState(1);
+  // const [pageNum, setPageNum] = useState(1);
   const [movieList, setMovieList] = useState(null);
   const [correct, setCorrect] = useState(true);
 
+  const params = useParams();
+
+  window.scrollTo({
+    top: 0
+  })
 
   let moviesListObj = null;
   if (movieCollection === "trending_movie") {
@@ -31,11 +36,11 @@ const TrendingMovies = ({ movieCollection }) => {
 
   useEffect(() => {
     const fetchData = () => {
-      getMoviesList(moviesListObj.url, pageNum).then((data) => setMovieList(data));
+      getMoviesList(moviesListObj.url, Number(params.id)).then((data) => setMovieList(data));
       setCorrect(false);
     }
     fetchData();
-  }, [pageNum]);
+  }, [params]);
 
   return (
     <>
@@ -56,6 +61,8 @@ const TrendingMovies = ({ movieCollection }) => {
       {
         movieList
         &&
+        !correct
+        &&
         <div className="flex-grow p-4">
 
           <h2 className='text-center text-3xl font-bold my-8 mb-16 underline decoration-indigo-700 decoration-4 underline-offset-8'>{moviesListObj.heading}</h2>
@@ -65,25 +72,25 @@ const TrendingMovies = ({ movieCollection }) => {
           </div>
 
           <div className='flex justify-center gap-4 items-center mt-8 mb-4'>
-            <button
-              // to={`/${movieList.id}/${pageNum}`}
-              style={pageNum === 1 ? { cursor: "not-allowed", backgroundColor: "#b8bbf2", color: "#000" } : null}
-              className='px-6 py-2 bg-indigo-600 hover:opacity-80 rounded-full text-white cursor-pointer'
-              onClick={() => setPageNum(pageNum - 1)}
-              disabled={pageNum === 1}
+            <Link
+                to={`/${moviesListObj.id}/${Number(params.id) - 1}`}
+                style={Number(params.id) === 1 ? { cursor: "not-allowed", backgroundColor: "#b8bbf2", color: "#000" } : null}
+                className={`px-6 py-2 bg-indigo-600 hover:opacity-80 rounded-full text-white cursor-pointer ${Number(params.id) === 1 ? "pointer-events-none cursor-not-allowed bg-[#b8bbf2] text-[#000]" : 'pointer-events-auto'}`}
+              // onClick={() => setPageNum(pageNum - 1)}
+                disabled={Number(params.id) === 1}
             >
               Prev
-            </button>
-            <p className='text-xl font-medium '>{pageNum}</p>
-            <button
-              // to={`/${movieList.id}/${pageNum}`}
-              style={pageNum === Number(movieList.total_pages) ? { cursor: "not-allowed", backgroundColor: "#b8bbf2", color: "#000" } : null}
+            </Link>
+              <p className='text-xl font-medium '>{Number(params.id)}</p>
+            <Link
+                to={`/${moviesListObj.id}/${Number(params.id) + 1}`}
+                style={Number(params.id) === Number(movieList.total_pages) ? { cursor: "not-allowed", backgroundColor: "#b8bbf2", color: "#000" } : null}
               className='px-6 py-2 bg-indigo-600 hover:opacity-80 rounded-full text-white cursor-pointer'
-              onClick={() => setPageNum(pageNum + 1)}
-              disabled={pageNum === Number(movieList.total_pages)}
+              // onClick={() => setPageNum(pageNum + 1)}
+                disabled={Number(params.id) === Number(movieList.total_pages)}
             >
               Next
-            </button>
+            </Link>
           </div>
         </div>
       }

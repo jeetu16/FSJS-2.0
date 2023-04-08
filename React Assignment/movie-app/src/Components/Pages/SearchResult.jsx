@@ -18,8 +18,6 @@ const SearchResult = () => {
     fetchSearchResult();
   }, [pageNum])
 
-  console.log(searchMovies)
-
   return (
     <div className='flex flex-grow place-content-center flex-col'>
 

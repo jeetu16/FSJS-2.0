@@ -6,12 +6,9 @@ import TrendingMovies from "./Components/Pages/TrendingMovies";
 import Layout from "./Layout/Layout";
 import MovieDetails from "./Components/Pages/MovieDetails";
 import SearchResult from "./Components/Pages/SearchResult";
-// import React, { useContext } from "react";
-// import MyDataContext from "./Context/MyDataContext";
 
 
 function App() {
-  // const { top_rated_movie, trending_movie } = useContext(MyDataContext);
   const router = createBrowserRouter([
     {
       path: "/",
@@ -22,19 +19,19 @@ function App() {
           element: <Home />
         },
         {
-          path: "/trendingMovie/",
+          path: "/trendingMovie/:id",
           element: <TrendingMovies movieCollection={"trending_movie"} />,
         },
         {
-          path: "/topRatedMovie/",
+          path: "/topRatedMovie/:id",
           element: <TrendingMovies movieCollection={"top_rated_movie"} />
         },
         {
-          path: "/trendingShow/",
+          path: "/trendingShow/:id",
           element: <TrendingMovies movieCollection={"trending_tvShows"} />
         },
         {
-          path: "/topRatedShow/",
+          path: "/topRatedShow/:id",
           element: <TrendingMovies movieCollection={"top_rated_tvShows"} />
         },
         {
