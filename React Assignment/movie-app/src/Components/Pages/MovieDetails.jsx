@@ -72,6 +72,9 @@ const MovieDetails = () => {
                                             <p className='my-4 leading-8'>
                                                 <span className='font-bold text-center mr-2'>Plot:</span>{movieDetail.Plot}
                                             </p>
+                                            <p className='my-4 leading-8'>
+                                                <span className='font-bold text-center mr-2'>Awards:</span>{movieDetail.Awards}
+                                            </p>
 
                                         </div>
                                     </div>
