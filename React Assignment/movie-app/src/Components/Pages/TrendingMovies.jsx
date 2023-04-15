@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom';
 import { getMoviesList } from '../../api/fetchAPI';
 import MyDataContext from '../../Context/MyDataContext';
-import MovieCard from '../../Sub_Components/MovieCard'
+import MovieCard from '../Sub_Components/MovieCard'
 
 const TrendingMovies = ({ movieCollection }) => {
 
@@ -12,7 +12,7 @@ const TrendingMovies = ({ movieCollection }) => {
 
   const params = useParams();
 
-  window.scrollTo({
+  scrollTo({
     top: 0
   })
 
@@ -40,6 +40,7 @@ const TrendingMovies = ({ movieCollection }) => {
       setCorrect(false);
     }
     fetchData();
+    console.log("Hello");
   }, [params]);
 
   return (

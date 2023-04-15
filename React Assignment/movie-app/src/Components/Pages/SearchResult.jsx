@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { getSearchMovies } from '../../api/fetchAPI';
-import MovieCard from '../../Sub_Components/MovieCard';
+import MovieCard from '../Sub_Components/MovieCard';
 
 const SearchResult = () => {
 

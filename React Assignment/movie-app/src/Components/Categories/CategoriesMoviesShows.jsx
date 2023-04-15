@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import ButtonSeeMore from '../../Sub_Components/ButtonSeeMore';
+import ButtonSeeMore from '../Sub_Components/ButtonSeeMore';
 import { getMoviesList } from '../../api/fetchAPI';
-import MovieCard from '../../Sub_Components/MovieCard';
+import MovieCard from '../Sub_Components/MovieCard';
 
 const CategoriesMovies = ({ movieCategory }) => {
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { getMoviesList } from '../api/fetchAPI'
+import { getMoviesList } from '../../api/fetchAPI'
 
 const TopTrendingMovie = ({ trendingMovie }) => {
 
