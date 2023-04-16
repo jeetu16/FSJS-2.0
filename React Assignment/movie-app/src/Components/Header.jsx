@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import { GiHamburgerMenu } from 'react-icons/gi';
 
 const Header = () => {
 
@@ -21,6 +22,7 @@ const Header = () => {
     return (
         <>
             <header className='bg-indigo-700 flex flex-col items-center p-2 text-white sm:flex-row sm:justify-between sticky top-0 z-10 px-6'>
+                <GiHamburgerMenu className='text-4xl cursor-pointer'/>
                 <div className='w-fittext-center py-2'>
                     <Link to="/" className='text-2xl font-bold font-mono sm:text-4xl tracking-wide'><span className="font-serif text-orange-500 ">M</span>ovie<span className='font-serif text-[papayawhip]'>B</span>uzz</Link>
                 </div>
