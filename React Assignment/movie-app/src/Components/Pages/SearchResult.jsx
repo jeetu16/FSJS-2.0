@@ -10,9 +10,13 @@ const SearchResult = () => {
   const [searchTitle, setSearchTitle] = useState(location.state);
   const [correct, setCorrect] = useState(true);
   const [pageNum, setPageNum] = useState(1);
+
+  scrollTo({
+    top: 0
+  })
   useEffect(() => {
-    const fetchSearchResult = async () => {
-      await getSearchMovies(searchTitle, pageNum).then((data) => setSearchMovies(data));
+    const fetchSearchResult = () => {
+      getSearchMovies(searchTitle, pageNum).then((data) => setSearchMovies(data));
       setCorrect(false);
     }
     fetchSearchResult();
@@ -46,7 +50,7 @@ const SearchResult = () => {
           <>
             <h2 className='text-center text-2xl font-bold my-8'>Showing results for: <span className=' font-medium text-indigo-700 '> {searchTitle}</span></h2>
             <div className='grid place-content-center grid-cols-2 gap-4 px-4 sm:grid-cols-4 sm:gap-8 text-center'>
-              {searchMovies.Search.map((item) => <MovieCard key={item.imdbID} movie={item} />)}
+              {searchMovies.Search.map((item) => <MovieCard key={item.imdbID} movie={item} movieCategory={item.Type ==="series" ? {type:"tv"} : {type:"movie"} } />)}
             </div>
             {
               searchMovies.totalResults > 11 &&

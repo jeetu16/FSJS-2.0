@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { Outlet } from 'react-router-dom';
 import MyDataContext from '../Context/MyDataContext';
 import TopTrendingMovie from './Sub_Components/TopTrendingMovie';
-import CategoriesMoviesShows from './Categories/CategoriesMoviesShows';
+import CategoriesMoviesShows from './CategoriesMoviesShows';
 const Main = () => {
 
   const { top_rated_movie, trending_movie, top_rated_tvShows, trending_tvShows } = useContext(MyDataContext);

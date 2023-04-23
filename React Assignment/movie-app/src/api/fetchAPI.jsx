@@ -26,4 +26,8 @@ export const getSearchMovies = async (search,page=1) => {
     return response.data;
 }
 
+export const getSimilarMovies = async (title,id) => {
+    const response = await axiosBase.get(`${title}/${id}/similar?api_key=${API_Key}&page=1`);
+    return response.data;
+}  
 

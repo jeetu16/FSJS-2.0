@@ -1,8 +1,9 @@
 import React, { useRef, useState } from 'react';
-import { FaSearch } from 'react-icons/fa';
+import { FaSearch, FaWindowClose } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { GiHamburgerMenu } from 'react-icons/gi';
+import { IoClose } from 'react-icons/io5';
 
 const Header = () => {
 
@@ -11,6 +12,7 @@ const Header = () => {
     const focusOnSearch = useRef(null);
     const [searchMovie, setSearchMovie] = useState("");
     const [searchBtnToggle, setSearchBtnToggle] = useState(false);
+    const [menuBarBtnToggle, setMenuBarBtnToggle] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -22,29 +24,49 @@ const Header = () => {
 
     const handleSearchBtn = (e) => {
         setSearchBtnToggle(!searchBtnToggle);
-        alert("Hello");
+        setMenuBarBtnToggle(false);
+    }
+    const handleMenuBar = () => {
+        setMenuBarBtnToggle(!menuBarBtnToggle);
+        setSearchBtnToggle(false);
     }
 
     return (
-        <>
-            <header className='bg-indigo-700 flex flex-row items-center p-2 text-white sm:flex-row sm:justify-between sticky top-0 z-10 px-6 justify-between'>
-                <button className='border px-2 py-1 sm:hidden' onClick={() => alert("hello")}>
-                    <GiHamburgerMenu className='cursor-pointer text-2xl' />
+        <div>
+            <header className={`bg-indigo-700 flex flex-row items-center p-2 text-white xl:flex-row xl:justify-between sticky top-0 z-10 px-6 justify-between ${searchBtnToggle ? 'mb-[7vh] duration-500' : 'mb-0 duration-500'}`}>
+                <button className='border px-2 py-1 xl:hidden' onClick={handleMenuBar}>
+                    {
+                        menuBarBtnToggle
+                            ?
+                            <IoClose className='cursor-pointer text-2xl duration-500' />
+                            :
+                            <GiHamburgerMenu className='cursor-pointer text-2xl duration-500' />
+                    }
                 </button>
                 <div className='w-fittext-center py-2'>
-                    <Link to="/" className='text-2xl font-bold font-mono sm:text-4xl tracking-wide'><span className="font-serif text-orange-500 ">M</span>ovie<span className='font-serif text-[papayawhip]'>B</span>uzz</Link>
+                    <Link to="/" className='text-2xl font-bold font-mono md:text-3xl xl:text-4xl tracking-wide'><span className="font-serif text-orange-500 ">M</span>ovie<span className='font-serif text-[papayawhip]'>B</span>uzz</Link>
                 </div>
-                <ul className='absolute top-20 hidden text-black sm:static gap-5 text-lg font-semibold sm:text-[papayawhip] sm:flex'>
-                    <li className='cursor-pointer hover:opacity-80 duration-300 hover:scale-x-110'>Home</li>
-                    <li className='cursor-pointer hover:opacity-80 duration-300 hover:scale-x-110'>Trending Movies</li>
-                    <li className='cursor-pointer hover:opacity-80 duration-300 hover:scale-x-110'>Top Rated Movies</li>
-                    <li className='cursor-pointer hover:opacity-80 duration-300 hover:scale-x-110'>Trending Shows</li>
-                    <li className='cursor-pointer hover:opacity-80 duration-300 hover:scale-x-110'>Top Rated Shows</li>
+                <ul className={`absolute w-full bg-indigo-700 left-0 xl:w-auto text-center top-16 xl:bg-indigo-700 xl:static gap-5 text-lg font-semibold xl:flex py-6 xl:py-2 text-white ${menuBarBtnToggle ? 'top-16 duration-500' : 'top-[-20rem] duration-500'}`}>
+                    <Link to="/" onClick={() => setMenuBarBtnToggle(false)}>
+                        <li className='border-t-2 hover:bg-white hover:text-indigo-700 xl:hover:bg-indigo-700 xl:hover:text-white py-2 xl:border-none xl:py-0 cursor-pointer hover:opacity-80 duration-300 hover:scale-x-110'>Home</li>
+                    </Link>
+                    <Link to="/trendingMovie/1" onClick={() => setMenuBarBtnToggle(false)}>
+                        <li className='border-t-2 hover:bg-white hover:text-indigo-700 xl:hover:bg-indigo-700 xl:hover:text-white py-2 xl:border-none xl:py-0 cursor-pointer hover:opacity-80 duration-300 hover:scale-x-110'>Trending Movies</li>
+                    </Link>
+                    <Link to="/topRatedMovie/1" onClick={() => setMenuBarBtnToggle(false)}>
+                        <li className='border-t-2 hover:bg-white hover:text-indigo-700 xl:hover:bg-indigo-700 xl:hover:text-white py-2 xl:border-none xl:py-0 cursor-pointer hover:opacity-80 duration-300 hover:scale-x-110'>Top Rated Movies</li>
+                    </Link>
+                    <Link to="/trendingShow/1" onClick={() => setMenuBarBtnToggle(false)}>
+                        <li className='border-t-2 hover:bg-white hover:text-indigo-700 xl:hover:bg-indigo-700 xl:hover:text-white py-2 xl:border-none xl:py-0 cursor-pointer hover:opacity-80 duration-300 hover:scale-x-110'>Trending Shows</li>
+                    </Link >
+                    <Link to="/topRatedShow/1" onClick={() => setMenuBarBtnToggle(false)}>
+                        <li className='border-t-2 hover:bg-white hover:text-indigo-700 xl:hover:bg-indigo-700 xl:hover:text-white py-2 border-b-2 xl:border-none xl:py-0 cursor-pointer hover:opacity-80 duration-300 hover:scale-x-110'>Top Rated Shows</li>
+                    </Link >
                 </ul>
-                <form className='sm:flex items-center sm:justify-center mt-2 w-full px-2 text-xl text-black p-4 sm:p-2 sm:w-fit absolute sm:static top-[7vh] bg-indigo-700 border sm:border-none sm:bg-indigo-700 left-0 z-10 flex justify-around' onSubmit={(e) => handleSubmit(e)}>
+                <form className={`flex text-center items-center xl:justify-center mt-2 w-full px-2 text-xl text-black p-4 xl:p-2 xl:w-fit absolute xl:static bg-indigo-700 xl:border-none xl:bg-indigo-700 left-0 z-10 ${searchBtnToggle ? 'top-[7vh] duration-500' : "top-[-20vh] duration-500"}`} onSubmit={(e) => handleSubmit(e)}>
                     <input
                         autoFocus
-                        className='outline-none p-1 rounded'
+                        className='outline-none p-1 rounded flex-grow'
                         type="text"
                         placeholder='Search Movies'
                         ref={focusOnSearch}
@@ -54,23 +76,23 @@ const Header = () => {
                     />
                     <button
                         type='submit'
-                        className={`text-white ml-2 p-0.5 ${searchBtnToggle}`}
+                        className={`text-white ml-2 p-0.5`}
                         onClick={(e) => searchMovie && handleSubmit(e)}
                     >
                         {
-                            searchBtnToggle
-                            ? 
-                            <FaSearch />
-                            :
-                            "Search"
+                            window.innerWidth > 1280
+                                ?
+                                <FaSearch />
+                                :
+                                "Search"
                         }
                     </button>
                 </form>
-                <button className='sm:hidden border  py-1 px-2' onClick={handleSearchBtn}>
+                <button className='xl:hidden border  py-1 px-2' onClick={handleSearchBtn}>
                     <FaSearch className='text-2xl' />
                 </button>
-            </header>
-        </>
+            </header >
+        </div>
     )
 }
 

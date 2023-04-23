@@ -7,25 +7,29 @@ export const DataProvider = ({children}) => {
     const trending_movie = {
         url: "trending/movie/day",
         heading: "Trending Movies",
-        id:"trendingMovie"
+        id:"trendingMovie",
+        type: "movie"
     }
 
     const top_rated_movie = {
         url: "movie/top_rated",
         heading : "Top Rated Movies",
-        id:"topRatedMovie"
+        id:"topRatedMovie",
+        type: "movie"
     }
 
     const trending_tvShows = {
         url: "trending/tv/day",
         heading : "Trending TV Shows",
-        id:"trendingShow"
+        id:"trendingShow",
+        type: "tv"
     }
 
     const top_rated_tvShows = {
         url: "tv/top_rated",
         heading: "Top Rated TV Shows",
-        id:"topRatedShow"
+        id:"topRatedShow",
+        type: "tv"
     }
 
     return (

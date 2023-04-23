@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const MovieCard = ({ movie }) => {
-
-
+const MovieCard = ({ movie, movieCategory }) => {
+  
   const posterPath = "https://image.tmdb.org/t/p/w500/";
   return (
     <Link
-      to="/movieDetails" state={{movieName:movie.title || movie.name || movie.Title}}
+      to="/movieDetails" state={{movieName:movie.title || movie.name || movie.Title,movieId:movie.id, media_Type: movieCategory.type, movieDetail:movieCategory}}
       className=' cursor-pointer hover:opacity-90 hover:scale-105 transition-all'
+      onClick={() => console.log(movie)}
     >
       <div className='rounded-md w-full shadow shadow-black h-72 sm:h-96'>
         <img className='w-full rounded-md h-full' src={movie.Poster===undefined ? `${posterPath}${movie.poster_path}` : movie.Poster } alt="poster" />
@@ -18,7 +18,7 @@ const MovieCard = ({ movie }) => {
         movie.Title === undefined ? (
         movie.title !== undefined ?
             <p className="bottom-1 p-2 font-medium text-indigo-700 text-lg sm:text-xl">
-            {movie.title} ({movie.release_date.slice(0, 4)})
+              {movie.title} {movie.release_date !== "" ? `(${movie.release_date.slice(0, 4)})` : ""}
           </p>
           :
           <p className="bottom-1 p-2 font-medium text-indigo-700 text-lg sm:text-xl">

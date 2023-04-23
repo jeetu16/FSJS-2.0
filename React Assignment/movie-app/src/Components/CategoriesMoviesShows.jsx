@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import ButtonSeeMore from '../Sub_Components/ButtonSeeMore';
-import { getMoviesList } from '../../api/fetchAPI';
-import MovieCard from '../Sub_Components/MovieCard';
+import ButtonSeeMore from './Sub_Components/ButtonSeeMore';
+import { getMoviesList } from '../api/fetchAPI';
+import MovieCard from './Sub_Components/MovieCard';
 
 const CategoriesMovies = ({ movieCategory }) => {
 
@@ -42,7 +42,7 @@ const CategoriesMovies = ({ movieCategory }) => {
                         <ButtonSeeMore value={"See More"} movieCategory={movieCategory} />
                     </div>
                     <div className='grid grid-cols-2 gap-4 sm:grid-cols-4 sm:px-4 sm:gap-8'>
-                        {categoriesMovies.map((movie) => <MovieCard key={movie.id} movie={movie} />)}
+                        {categoriesMovies.map((movie) => <MovieCard key={movie.id} movie={movie} movieCategory = {movieCategory}/>)}
                     </div>
                 </div>
             }

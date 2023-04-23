@@ -69,7 +69,7 @@ const TrendingMovies = ({ movieCollection }) => {
           <h2 className='text-center text-3xl font-bold my-8 mb-16 underline decoration-indigo-700 decoration-4 underline-offset-8'>{moviesListObj.heading}</h2>
 
           <div className='grid grid-cols-2 gap-4 sm:grid-cols-4 sm:px-4 sm:gap-8'>
-            {movieList.results.map((movie) => <MovieCard key={movie.id} movie={movie} />)}
+              {movieList.results.map((movie) => <MovieCard key={movie.id} movie={movie} movieCategory={moviesListObj}/>)}
           </div>
 
           <div className='flex justify-center gap-4 items-center mt-8 mb-4'>
